@@ -149,7 +149,7 @@ proxy-groups:
     - Axis Tiktok 10
     - Axis Tiktok 11
 - name: Telkomsel
-  type: url-test
+  type: select
   url: https://www.google.com/
   interval: 300
   proxies:
@@ -187,7 +187,7 @@ proxy-groups:
     - Whatsapp 10
     - Whatsapp 11
 - name: Indosat
-  type: url-test
+  type: select
   url: https://www.google.com/
   interval: 300
   proxies:
