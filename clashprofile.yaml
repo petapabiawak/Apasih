@@ -7,9 +7,9 @@ external-controller: '0.0.0.0:9090'
 secret: ''
 
 proxies:
-  - {name: Edukasi 1, server: office.carepros.ca, port: 80, type: vmess, uuid: a034f09e-900f-4190-ba4c-a9f683646cbd, alterId: 64, cipher: auto, tls: , network: ws, ws-path: /sshocean, ws-headers: {Host: ru01.v2-ray.us}}
-  - {name: Edukasi 2, server: www.udemy.com, port: 80, type: vmess, uuid: a034f09e-900f-4190-ba4c-a9f683646cbd, alterId: 64, cipher: auto, tls: , network: ws, ws-path: /sshocean, ws-headers: {Host: ru01.v2-ray.us}}
-  - {name: Edukasi 3, server: bimbel.ruangguru.com, port: 80, type: vmess, uuid: a034f09e-900f-4190-ba4c-a9f683646cbd, alterId: 64, cipher: auto, tls: , network: ws, ws-path: /sshocean, ws-headers: {Host: ru01.v2-ray.us}}
+  - {name: Edukasi 1, server: office.carepros.ca, port: 80, type: vmess, uuid: 525b2d34-720a-11eb-aae6-db4782632c64, alterId: 32, cipher: auto, tls: , network: ws, ws-path: /sshstores, ws-headers: {Host: v2ray-5.sshstores.vip}}
+  - {name: Edukasi 2, server: www.udemy.com, port: 80, type: vmess, uuid: 525b2d34-720a-11eb-aae6-db4782632c64, alterId: 32, cipher: auto, tls: , network: ws, ws-path: /sshstores, ws-headers: {Host: v2ray-5.sshstores.vip}}
+  - {name: Edukasi 3, server: bimbel.ruangguru.com, port: 80, type: vmess, uuid: 525b2d34-720a-11eb-aae6-db4782632c64, alterId: 32, cipher: auto, tls: , network: ws, ws-path: /sshstores, ws-headers: {Host: v2ray-5.sshstores.vip}}
   - {name: Axis Unligame 1, server: v2ray-7.sshstores.vip, port: 443, type: vmess, uuid: 52608e32-720a-11eb-a851-bbc03831f8f9, alterId: 32, cipher: auto, tls: true, skip-cert-verify: true, servername: www.pubgmobile.com, network: ws, ws-path: /sshstores, ws-headers: {Host: www.pubgmobile.com}}
   - {name: Axis Unligame 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: daf3e1c0-7604-11eb-8fdd-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
   - {name: Axis Unligame 3, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
@@ -87,7 +87,7 @@ proxies:
   - {name: Whatsapp 9, server: 34.207.86.82, port: 1002, type: ssr, cipher: aes-256-cfb, password: luaja, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: web.whatsapp.com}
   - {name: Whatsapp 10, server: ss.sg.sshmax.net, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: rOcUhy2Ju6sw, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
   - {name: Whatsapp 11, type: vmess, server: azure-182.ddns-only.xyz, port: 56666, uuid: 041c7850-9e28-39a9-84b9-67502185be9e, alterId: 2, cipher: auto, udp: true, network: ws, ws-path: /v2ray, ws-headers: {Host: web.whatsapp.com}}
-  - {name: Indosat Opok, server: covid19.go.id, port: 80, type: vmess, uuid: a034f09e-900f-4190-ba4c-a9f683646cbd, alterId: 64, cipher: auto, tls: , network: ws, ws-path: /sshocean, ws-headers: {Host: ru01.v2-ray.us}}
+  - {name: Indosat Opok, server: covid19.go.id, port: 80, type: vmess, uuid: 525b2d34-720a-11eb-aae6-db4782632c64, alterId: 32, cipher: auto, tls: , network: ws, ws-path: /sshstores, ws-headers: {Host: v2ray-5.sshstores.vip}}
 
 proxy-groups:
 - name: Proxy
