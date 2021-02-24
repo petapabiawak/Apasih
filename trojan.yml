@@ -75,7 +75,7 @@ proxies:
   - {name: VIU 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: viu.com, alpn: , skip-cert-verify: true}
 
 proxy-groups:
-  - name: Proxy
+  - name: Select
     type: select
     proxies:
       - UNLIGAME 1
@@ -173,4 +173,4 @@ rules:
 - DOMAIN-SUFFIX,ad.com,REJECT
 - SRC-IP-CIDR,192.168.1.201/32,DIRECT
 - GEOIP,,DIRECT
-- MATCH,Proxy
+- MATCH,Select,dns-failed
