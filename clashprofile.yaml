@@ -97,7 +97,7 @@ proxy-groups:
     - Telkomsel
     - Indosat
 - name: Axis
-  type: url-test
+  type: select
   url: https://www.google.com/
   interval: 300
   proxies:
