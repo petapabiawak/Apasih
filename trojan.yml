@@ -144,22 +144,6 @@ proxy-groups:
     url: https://www.google.com/
     interval: 300
 
-rules:
-rule-providers:
-  TikTok:
-    type: http
-    behavior: classical
-    path: ./ruleprovider/TikTok.yaml	
-    url: https://raw.githubusercontent.com/frainzy1477/clashrules/master/Clash/RuleSet/StreamingMedia/Video/TikTok.yaml
-    interval: 86400
-  Advertising:
-    type: http
-    behavior: classical
-    path: ./ruleprovider/Advertising.yaml	
-    url: https://raw.githubusercontent.com/frainzy1477/clashrules/master/Clash/RuleSet/Guard/Advertising.yaml
-    interval: 86400
-
-rules:
 rule-providers:
   TikTok:
     type: http
