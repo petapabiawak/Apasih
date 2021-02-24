@@ -1,3 +1,6 @@
+- DOMAIN,analytics.google.com
+- DOMAIN,analyticsinsights-pa.googleapis.com
+- DOMAIN,analyticsreporting.googleapis.com
 - DOMAIN-SUFFIX,appspot.com
 - DOMAIN-SUFFIX,blogger.com
 - DOMAIN-SUFFIX,getoutline.org
