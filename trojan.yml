@@ -13,63 +13,63 @@ proxies:
   - {name: UNLIGAME 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
   - {name: UNLIGAME 2, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
   - {name: UNLIGAME 3, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: bad28590-7425-11eb-a0e0-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
-  - {name: UNLIGAME 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: dd27ad10-76c7-11eb-972d-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
+  - {name: UNLIGAME 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 1db4ce40-776b-11eb-8ef9-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
   - {name: UNLIGAME 5, server: nl-trojan.bonds.id, port: 443, type: trojan, password: 0eebc4e0-76c8-11eb-b15f-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
   - {name: UNLIGAME 6, server: us-trojan.bonds.id, port: 443, type: trojan, password: 285491c0-76c8-11eb-a220-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
   - {name: UNLIGAME 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
   - {name: CONFERENCE 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
   - {name: CONFERENCE 2, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
   - {name: CONFERENCE 3, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: bad28590-7425-11eb-a0e0-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
-  - {name: CONFERENCE 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: dd27ad10-76c7-11eb-972d-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
+  - {name: CONFERENCE 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 1db4ce40-776b-11eb-8ef9-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
   - {name: CONFERENCE 5, server: nl-trojan.bonds.id, port: 443, type: trojan, password: 0eebc4e0-76c8-11eb-b15f-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
   - {name: CONFERENCE 6, server: us-trojan.bonds.id, port: 443, type: trojan, password: 285491c0-76c8-11eb-a220-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
   - {name: CONFERENCE 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
   - {name: CHAT 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
   - {name: CHAT 2, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
   - {name: CHAT 3, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: bad28590-7425-11eb-a0e0-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
-  - {name: CHAT 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: dd27ad10-76c7-11eb-972d-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
+  - {name: CHAT 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 1db4ce40-776b-11eb-8ef9-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
   - {name: CHAT 5, server: nl-trojan.bonds.id, port: 443, type: trojan, password: 0eebc4e0-76c8-11eb-b15f-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
   - {name: CHAT 6, server: us-trojan.bonds.id, port: 443, type: trojan, password: 285491c0-76c8-11eb-a220-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
   - {name: CHAT 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
   - {name: TIKTOK 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
   - {name: TIKTOK 2, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
   - {name: TIKTOK 3, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: bad28590-7425-11eb-a0e0-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
-  - {name: TIKTOK 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: dd27ad10-76c7-11eb-972d-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
+  - {name: TIKTOK 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 1db4ce40-776b-11eb-8ef9-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
   - {name: TIKTOK 5, server: nl-trojan.bonds.id, port: 443, type: trojan, password: 0eebc4e0-76c8-11eb-b15f-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
   - {name: TIKTOK 6, server: us-trojan.bonds.id, port: 443, type: trojan, password: 285491c0-76c8-11eb-a220-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
   - {name: TIKTOK 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
   - {name: INSTAGRAM 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: www.instgram.com, alpn: , skip-cert-verify: true}
   - {name: INSTAGRAM 2, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: www.instgram.com, alpn: , skip-cert-verify: true}
   - {name: INSTAGRAM 3, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: bad28590-7425-11eb-a0e0-1239d0255272, udp: true, sni: www.instgram.com, alpn: , skip-cert-verify: true}
-  - {name: INSTAGRAM 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: dd27ad10-76c7-11eb-972d-1239d0255272, udp: true, sni: www.instgram.com, alpn: , skip-cert-verify: true}
+  - {name: INSTAGRAM 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 1db4ce40-776b-11eb-8ef9-1239d0255272, udp: true, sni: www.instgram.com, alpn: , skip-cert-verify: true}
   - {name: INSTAGRAM 5, server: nl-trojan.bonds.id, port: 443, type: trojan, password: 0eebc4e0-76c8-11eb-b15f-1239d0255272, udp: true, sni: www.instgram.com, alpn: , skip-cert-verify: true}
   - {name: INSTAGRAM 6, server: us-trojan.bonds.id, port: 443, type: trojan, password: 285491c0-76c8-11eb-a220-1239d0255272, udp: true, sni: www.instgram.com, alpn: , skip-cert-verify: true}
   - {name: INSTAGRAM 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: www.instgram.com, alpn: , skip-cert-verify: true}
   - {name: YOUTUBE 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: YOUTUBE 2, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: YOUTUBE 3, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: bad28590-7425-11eb-a0e0-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
-  - {name: YOUTUBE 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: dd27ad10-76c7-11eb-972d-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
+  - {name: YOUTUBE 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 1db4ce40-776b-11eb-8ef9-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: YOUTUBE 5, server: nl-trojan.bonds.id, port: 443, type: trojan, password: 0eebc4e0-76c8-11eb-b15f-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: YOUTUBE 6, server: us-trojan.bonds.id, port: 443, type: trojan, password: 285491c0-76c8-11eb-a220-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: YOUTUBE 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: WHATSAPP 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: WHATSAPP 2, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: WHATSAPP 3, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: bad28590-7425-11eb-a0e0-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
-  - {name: WHATSAPP 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: dd27ad10-76c7-11eb-972d-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
+  - {name: WHATSAPP 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 1db4ce40-776b-11eb-8ef9-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: WHATSAPP 5, server: nl-trojan.bonds.id, port: 443, type: trojan, password: 0eebc4e0-76c8-11eb-b15f-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: WHATSAPP 6, server: us-trojan.bonds.id, port: 443, type: trojan, password: 285491c0-76c8-11eb-a220-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: WHATSAPP 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: TWITTER 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: www.twitter.com, alpn: , skip-cert-verify: true}
   - {name: TWITTER 2, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: www.twitter.com, alpn: , skip-cert-verify: true}
   - {name: TWITTER 3, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: bad28590-7425-11eb-a0e0-1239d0255272, udp: true, sni: www.twitter.com, alpn: , skip-cert-verify: true}
-  - {name: TWITTER 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: dd27ad10-76c7-11eb-972d-1239d0255272, udp: true, sni: www.twitter.com, alpn: , skip-cert-verify: true}
+  - {name: TWITTER 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 1db4ce40-776b-11eb-8ef9-1239d0255272, udp: true, sni: www.twitter.com, alpn: , skip-cert-verify: true}
   - {name: TWITTER 5, server: nl-trojan.bonds.id, port: 443, type: trojan, password: 0eebc4e0-76c8-11eb-b15f-1239d0255272, udp: true, sni: www.twitter.com, alpn: , skip-cert-verify: true}
   - {name: TWITTER 6, server: us-trojan.bonds.id, port: 443, type: trojan, password: 285491c0-76c8-11eb-a220-1239d0255272, udp: true, sni: www.twitter.com, alpn: , skip-cert-verify: true}
   - {name: TWITTER 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: www.twitter.com, alpn: , skip-cert-verify: true}
   - {name: VIU 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: viu.com, alpn: , skip-cert-verify: true}
   - {name: VIU 2, server: sg1-trojan.bonds.id, port: 443, type: trojan, password: 5362a070-7425-11eb-b7fd-1239d0255272, udp: true, sni: viu.com, alpn: , skip-cert-verify: true}
   - {name: VIU 3, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: bad28590-7425-11eb-a0e0-1239d0255272, udp: true, sni: viu.com, alpn: , skip-cert-verify: true}
-  - {name: VIU 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: dd27ad10-76c7-11eb-972d-1239d0255272, udp: true, sni: viu.com, alpn: , skip-cert-verify: true}
+  - {name: VIU 4, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 1db4ce40-776b-11eb-8ef9-1239d0255272, udp: true, sni: viu.com, alpn: , skip-cert-verify: true}
   - {name: VIU 5, server: nl-trojan.bonds.id, port: 443, type: trojan, password: 0eebc4e0-76c8-11eb-b15f-1239d0255272, udp: true, sni: viu.com, alpn: , skip-cert-verify: true}
   - {name: VIU 6, server: us-trojan.bonds.id, port: 443, type: trojan, password: 285491c0-76c8-11eb-a220-1239d0255272, udp: true, sni: viu.com, alpn: , skip-cert-verify: true}
   - {name: VIU 7, server: trojan2.bonds.id, port: 443, type: trojan, password: fb7af850-743c-11eb-8bde-1239d0255272, udp: true, sni: viu.com, alpn: , skip-cert-verify: true}
