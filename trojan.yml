@@ -1,13 +1,9 @@
 port: 7890
 socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-ipv6: false
 allow-lan: true
-bind-address: "*"
-mode: rule
+mode: Rule
 log-level: info
-external-controller: 0.0.0.0:9090
+external-controller: 127.0.0.1:9090
 
 proxies:
   - {name: UNLIGAME 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: b46d7100-776a-11eb-bed4-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
@@ -145,12 +141,6 @@ proxy-groups:
     interval: 300
 
 rule-providers:
-  TikTok:
-    type: http
-    behavior: classical
-    path: ./ruleprovider/TikTok.yaml	
-    url: https://raw.githubusercontent.com/frainzy1477/clashrules/master/Clash/RuleSet/StreamingMedia/Video/TikTok.yaml
-    interval: 86400
   Advertising:
     type: http
     behavior: classical
@@ -159,7 +149,6 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,TikTok,REJECT
   - RULE-SET,Advertising,REJECT
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
