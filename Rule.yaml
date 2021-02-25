@@ -1,0 +1,95 @@
+proxy-groups:
+  - name: Select
+    type: select
+    proxies:
+      - Unligaming
+      - Conference
+      - Chat
+      - Tiktok
+      - Instagram
+      - Youtube
+      - Whatsapp
+    url: https://www.google.com/
+    interval: 300
+
+rules:
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,analysis,REJECT
+  - DOMAIN-SUFFIX,3lift.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-SUFFIX,ad.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,admob.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,ad.intl.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,data.mistat.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,tracking.miui.com,REJECT
+  - DOMAIN,adv.sec.miui.com,REJECT
+  - DOMAIN,adv.sec.intl.miui.com,REJECT
+  - DOMAIN,o2o.api.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,byteoversea.com,REJECT
+  - DOMAIN-SUFFIX,ibytedtos.com,REJECT
+  - DOMAIN-SUFFIX,ipstatp.com,REJECT
+  - DOMAIN-SUFFIX,muscdn.com,REJECT
+  - DOMAIN-SUFFIX,musical.ly,REJECT
+  - DOMAIN-SUFFIX,tiktok.com,REJECT
+  - DOMAIN-SUFFIX,tiktokcdn.com,REJECT
+  - DOMAIN-SUFFIX,tiktokv.com,REJECT
+  - DOMAIN-KEYWORD,-tiktokcdn-com,REJECT
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - GEOIP,IR,DIRECT
+  - MATCH,,Select,dns-failed
+
+
+
+
+
+
+
+
+
+rule-providers:
+  TikTok:
+    type: http
+    behavior: classical
+    path: ./ruleprovider/TikTok.yaml
+    url: https://raw.githubusercontent.com/frainzy1477/clashrules/master/Clash/RuleSet/StreamingMedia/Video/TikTok.yaml
+    interval: 86400
+  Advertising:
+    type: http
+    behavior: classical
+    path: ./ruleprovider/Advertising.yaml
+    url: https://raw.githubusercontent.com/frainzy1477/clashrules/master/Clash/RuleSet/Guard/Advertising.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,TikTok,REJECT
+  - RULE-SET,Advertising,REJECT
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - GEOIP,,DIRECT
+  - MATCH,Proxy
