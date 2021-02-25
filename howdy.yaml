@@ -57,18 +57,18 @@ proxy-groups:
     interval: 300
     proxies:
       - Unligame 1
-      - Conference 1
-      - Chat 1
-      - Tiktok 1
-      - Instagram 1
-      - Youtube 1
-      - Whatsapp 1
       - Unligame 2
+      - Conference 1
       - Conference 2
+      - Chat 1
       - Chat 2
+      - Tiktok 1
       - Tiktok 2
+      - Instagram 1
       - Instagram 2
+      - Youtube 1
       - Youtube 2
+      - Whatsapp 1
       - Whatsapp 2
 
 rule-providers:
