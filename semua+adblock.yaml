@@ -47,8 +47,6 @@ proxy-groups:
 
   - name: Vmess
     type: select
-    url: http://www.gstatic.com/generate_204
-    interval: 300
     proxies:
       - Edukasi 1
       - Edukasi 2
@@ -64,8 +62,6 @@ proxy-groups:
 
   - name: Trojan
     type: select
-    url: http://www.gstatic.com/generate_204
-    interval: 300
     proxies:
       - Unligame 2
       - Conference 2
@@ -77,8 +73,6 @@ proxy-groups:
 
   - name: Shadowsocks
     type: select
-    url: http://www.gstatic.com/generate_204
-    interval: 300
     proxies:
       - Unligame 3
       - Conference 3
