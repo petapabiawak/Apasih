@@ -40,7 +40,7 @@ proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - Best Ping
+      - Otomatis
       - Vmess
       - Trojan
       - Shadowsocks
@@ -88,14 +88,36 @@ proxy-groups:
       - Youtube 3
       - Whatsapp 3
 
-  - name: Best Ping
+  - name: Otomatis
     type: url-test
     url: https://www.google.com/
     interval: 300
     proxies:
-      - Vmess
-      - Trojan
-      - Shadowsocks
+      - Edukasi 1
+      - Edukasi 2
+      - Edukasi 3
+      - Unligame 1
+      - Unligame 2
+      - Unligame 3
+      - Conference 1
+      - Conference 2
+      - Conference 3
+      - Chat 1
+      - Chat 2
+      - Chat 3
+      - Tiktok 1
+      - Tiktok 2
+      - Tiktok 3
+      - Instagram 1
+      - Instagram 2
+      - Instagram 3
+      - Youtube 1
+      - Youtube 2
+      - Youtube 3
+      - Whatsapp 1
+      - Whatsapp 2
+      - Whatsapp 3
+      - Indosat Opok
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
