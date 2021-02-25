@@ -46,8 +46,8 @@ proxy-groups:
       - Shadowsocks
 
   - name: Vmess
-    type: select
-    url: https://www.google.com/
+    type: url-test
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - Edukasi 1
@@ -63,8 +63,8 @@ proxy-groups:
       - Indosat Opok
 
   - name: Trojan
-    type: select
-    url: https://www.google.com/
+    type: url-test
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - Unligame 2
@@ -76,8 +76,8 @@ proxy-groups:
       - Whatsapp 2
 
   - name: Shadowsocks
-    type: select
-    url: https://www.google.com/
+    type: url-test
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - Unligame 3
@@ -90,7 +90,7 @@ proxy-groups:
 
   - name: Otomatis
     type: url-test
-    url: https://www.google.com/
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - Edukasi 1
