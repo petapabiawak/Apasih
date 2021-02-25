@@ -34,7 +34,7 @@ proxies:
   - {name: Instagram 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: www.instagram.com}}
   - {name: Youtube 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: www.googlevideo.com}}
   - {name: Whatsapp 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
-  - {name: Indosat Opok, server: covid19.go.id, port: 80, type: vmess, uuid: 525b2d34-720a-11eb-aae6-db4782632c64, alterId: 32, cipher: auto, tls: , network: ws, ws-path: /sshstores, ws-headers: {Host: v2ray-5.sshstores.vip}}
+  - {name: Indosat Opok, server: covid19.go.id, port: 80, type: vmess, uuid: 7b10251a-778a-11eb-b745-8359041d6f7a, alterId: 32, cipher: auto, tls: , network: ws, ws-path: /sshstores, ws-headers: {Host: v2raysg-4.sshstores.vip}}
 
 proxy-groups:
   - name: Proxy
