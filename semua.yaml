@@ -30,18 +30,25 @@ proxies:
   - {name: Instagram 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: www.instagram.com}}
   - {name: Youtube 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: www.googlevideo.com}}
   - {name: Whatsapp 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
+  - {name: Unligame 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.pubgmobile.com, udp: true}
+  - {name: Conference 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: teams.microsoft.com, udp: true}
+  - {name: Chat 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: line.me, udp: true}
+  - {name: Tiktok 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: p16-va-default.akamaized.net, udp: true}
+  - {name: Instagram 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.instagram.com, udp: true}
+  - {name: Youtube 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.googlevideo.com, udp: true}
+  - {name: Whatsapp 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: web.whatsapp.com, udp: true}
   - {name: Indosat Opok, server: covid19.go.id, port: 80, type: vmess, uuid: 0b36a641-6f85-4036-85ce-288ebc2bc0b2, alterId: 0, cipher: auto, tls: , network: ws, ws-path: /JAGOANSSH/, ws-headers: {Host: id3.vmes.xyz}}
 
 proxy-groups:
-  - name: Proxy
+  - name: PROXY
     type: select
     proxies:
-      - Otomatis
-      - Vmess
-      - Trojan
-      - Shadowsocks
-
-  - name: Vmess
+      - OTOMATIS
+      - VMESS
+      - TROJAN
+      - SS
+      - SSR
+  - name: VMESS
     type: select
     proxies:
       - Edukasi 1
@@ -55,8 +62,7 @@ proxy-groups:
       - Youtube 1
       - Whatsapp 1
       - Indosat Opok
-
-  - name: Trojan
+  - name: TROJAN
     type: select
     proxies:
       - Unligame 2
@@ -66,8 +72,7 @@ proxy-groups:
       - Instagram 2
       - Youtube 2
       - Whatsapp 2
-
-  - name: Shadowsocks
+  - name: SS
     type: select
     proxies:
       - Unligame 3
@@ -77,8 +82,17 @@ proxy-groups:
       - Instagram 3
       - Youtube 3
       - Whatsapp 3
-
-  - name: Otomatis
+  - name: SSR
+    type: select
+    proxies:
+      - Unligame 4
+      - Conference 4
+      - Chat 4
+      - Tiktok 4
+      - Instagram 4
+      - Youtube 4
+      - Whatsapp 4
+  - name: OTOMATIS
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -89,24 +103,31 @@ proxy-groups:
       - Unligame 1
       - Unligame 2
       - Unligame 3
+      - Unligame 4
       - Conference 1
       - Conference 2
       - Conference 3
+      - Conference 4
       - Chat 1
       - Chat 2
       - Chat 3
+      - Chat 4
       - Tiktok 1
       - Tiktok 2
       - Tiktok 3
+      - Tiktok 4
       - Instagram 1
       - Instagram 2
       - Instagram 3
+      - Instagram 4
       - Youtube 1
       - Youtube 2
       - Youtube 3
+      - Youtube 4
       - Whatsapp 1
       - Whatsapp 2
       - Whatsapp 3
+      - Whatsapp 4
       - Indosat Opok
 
 rules:
@@ -122,4 +143,4 @@ rules:
   - DOMAIN-SUFFIX,ad.com,REJECT
   - SRC-IP-CIDR,192.168.1.201/32,DIRECT
   - GEOIP,IR,DIRECT
-  - MATCH,,Proxy,dns-failed
+  - MATCH,,PROXY,dns-failed
