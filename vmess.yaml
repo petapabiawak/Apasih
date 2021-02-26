@@ -13,7 +13,7 @@ proxies:
   - {name: Chat, server: 139.59.112.120, port: 443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: line.me, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: line.me}}
   - {name: Instagram, server: 139.59.112.120, port: 443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.instagram.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.instagram.com}}
   - {name: Youtube, server: 139.59.112.120, port: 443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.googlevideo.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.googlevideo.com}}
-  - {name: Whatsapp, server: 139.59.112.120, port: 443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, udp: true, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.joox.com}}
+  - {name: Whatsapp, server: 139.59.112.120, port: 443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.joox.com}}
   - {name: Serverme Axis, type: vmess, server: v2ray-sg2.serverme.us, port: 15132, uuid: 5d5e3f30-f60d-4db7-8178-45077713385e, alterId: 64, cipher: auto, udp: true, network: ws, ws-path: /, ws-headers: {Host: filecdn.igamecj.com}}
   - {name: Serverme Tsel, type: vmess, server: v2ray-sg2.serverme.us, port: 15132, uuid: 5d5e3f30-f60d-4db7-8178-45077713385e, alterId: 64, cipher: auto, udp: true, network: ws, ws-path: /, ws-headers: {Host: www.joox.com}}
 
