@@ -22,14 +22,14 @@ proxies:
   - {name: Whatsapp 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 6c4b44c0-779f-11eb-8b48-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
 
 proxy-groups:
-  - name: Proxy
+  - name: PROXY
     type: select
     proxies:
-      - Otomatis
-      - Indonesia
-      - Singapura
+      - OTOMATIS
+      - INDONESIA
+      - SINGAPURA
 
-  - name: Indonesia
+  - name: INDONESIA
     type: select
     proxies:
       - Unligame 1
@@ -40,7 +40,7 @@ proxy-groups:
       - Youtube 1
       - Whatsapp 1
 
-  - name: Singapura
+  - name: SINGAPURA
     type: select
     proxies:
       - Unligame 2
@@ -51,7 +51,7 @@ proxy-groups:
       - Youtube 2
       - Whatsapp 2
 
-  - name: Otomatis
+  - name: OTOMATIS
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -72,25 +72,66 @@ proxy-groups:
       - Whatsapp 2
 
 rule-providers:
-  Advertising:
+  reject:
     type: http
-    behavior: classical
-    path: ./ruleprovider/Advertising.yaml
-    url: https://raw.githubusercontent.com/frainzy1477/clashrules/master/Clash/RuleSet/Guard/Advertising.yaml
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
     interval: 86400
 
 rules:
-  - RULE-SET,Advertising,REJECT
-  - DOMAIN-SUFFIX,ad.com,REJECT
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
-  - IP-CIDR6,::1/128,DIRECT,no-resolve
-  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
-  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
-  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - PROCESS-NAME,v2ray,DIRECT
+  - PROCESS-NAME,xray,DIRECT
+  - PROCESS-NAME,naive,DIRECT
+  - PROCESS-NAME,trojan,DIRECT
+  - PROCESS-NAME,trojan-go,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT
+  - PROCESS-NAME,privoxy,DIRECT
+  - PROCESS-NAME,leaf,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,proxy,PROXY
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,lancidr,DIRECT,no-resolve
   - GEOIP,,DIRECT
-  - MATCH,Proxy
+  - MATCH,PROXY
