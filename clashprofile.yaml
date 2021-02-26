@@ -200,32 +200,21 @@ proxy-groups:
     - Indosat Opok
 
 rule-providers:
-  TikTok:
+  reject:
     type: http
-    behavior: classical
-    path: ./ruleprovider/TikTok.yaml	
-    url: https://raw.githubusercontent.com/frainzy1477/clashrules/master/Clash/RuleSet/StreamingMedia/Video/TikTok.yaml
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
     interval: 86400
-  Advertising:
+  lancidr:
     type: http
-    behavior: classical
-    path: ./ruleprovider/Advertising.yaml	
-    url: https://raw.githubusercontent.com/frainzy1477/clashrules/master/Clash/RuleSet/Guard/Advertising.yaml
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
     interval: 86400
 
 rules:
-  - RULE-SET,TikTok,REJECT
-  - RULE-SET,Advertising,REJECT
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
-  - IP-CIDR6,::1/128,DIRECT,no-resolve
-  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
-  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
-  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,ad.com,REJECT
-  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,lancidr,DIRECT,no-resolve
   - GEOIP,,DIRECT
-  - MATCH,Proxy
+  - MATCH,PROXY
