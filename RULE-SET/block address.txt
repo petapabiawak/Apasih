@@ -1,0 +1,17 @@
+address=/tiktok.com/#
+address=/cdn.tiktokv.com/#
+address=/api.tiktokv.com/#
+address=/tiktokcdn.com/#
+address=/p16.tiktokcdn.com/#
+address=/p16.tiktokcdn-com.akamaized.net/#
+address=/www.tiktokv.com/#
+address=/api-tl.tiktokv.com/#
+address=/v16tiktokcdn-a.akamaized.net/#
+address=/v16tiktokcdn-com.akamaized.net/#
+address=/xhamsterlive.com/#
+address=/xhamster2.com/#
+address=/www.pornhub.com/#
+address=/xnxx.com/#
+address=/javhd.vip/#
+address=/brazzer.com/#
+address=/www.xvideos.com/#
