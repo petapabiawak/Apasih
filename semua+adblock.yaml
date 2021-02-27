@@ -25,14 +25,14 @@ proxies:
   - {name: Youtube 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 43384170-7753-11eb-b53a-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: Whatsapp 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 43384170-7753-11eb-b53a-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: Joox 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 43384170-7753-11eb-b53a-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
-  - {name: Unligame 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: www.pubgmobile.com}}
-  - {name: Conference 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: teams.microsoft.com}}
-  - {name: Line 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: line.me}}
-  - {name: Tiktok 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: p16-va-default.akamaized.net}}
-  - {name: Instagram 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: www.instagram.com}}
-  - {name: Youtube 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: www.googlevideo.com}}
-  - {name: Whatsapp 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
-  - {name: Joox 3, server: SG1-sock.tcpvpn.com, port: 8443, type: ss, cipher: aes-256-gcm, password: tcpvpnSG1$@&^, plugin: obfs, plugin-opts: {mode: tls, host: www.joox.com}}
+  - {name: Unligame 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: www.pubgmobile.com}}
+  - {name: Conference 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: teams.microsoft.com}}
+  - {name: Line 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: line.me}}
+  - {name: Tiktok 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: p16-va-default.akamaized.net}}
+  - {name: Instagram 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: www.instagram.com}}
+  - {name: Youtube 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: www.googlevideo.com}}
+  - {name: Whatsapp 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
+  - {name: Joox 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: www.joox.com}}
   - {name: Unligame 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.pubgmobile.com, udp: true}
   - {name: Conference 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: teams.microsoft.com, udp: true}
   - {name: Line 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: line.me, udp: true}
