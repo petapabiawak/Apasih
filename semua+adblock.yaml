@@ -25,22 +25,22 @@ proxies:
   - {name: Youtube 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: Whatsapp 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: Joox 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
-  - {name: Unligame 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: www.pubgmobile.com}}
-  - {name: Conference 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: www.zoom.us}}
-  - {name: Line 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: line.me}}
-  - {name: Tiktok 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: p16-va-default.akamaized.net}}
-  - {name: Instagram 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: www.instagram.com}}
-  - {name: Youtube 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: www.googlevideo.com}}
-  - {name: Whatsapp 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
-  - {name: Joox 3, server: sg2-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: FZWdy3ScbT, plugin: obfs, plugin-opts: {mode: tls, host: www.joox.com}}
-  - {name: Unligame 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.pubgmobile.com, udp: true}
-  - {name: Conference 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.zoom.us, udp: true}
-  - {name: Line 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: line.me, udp: true}
-  - {name: Tiktok 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: p16-va-default.akamaized.net, udp: true}
-  - {name: Instagram 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.instagram.com, udp: true}
-  - {name: Youtube 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.googlevideo.com, udp: true}
-  - {name: Whatsapp 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: web.whatsapp.com, udp: true}
-  - {name: Joox 4, server: sg2-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: FZWdy3ScbT, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.joox.com, udp: true}
+  - {name: Unligame 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.pubgmobile.com}}
+  - {name: Conference 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.zoom.us}}
+  - {name: Line 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: line.me}}
+  - {name: Tiktok 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: p16-va-default.akamaized.net}}
+  - {name: Instagram 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.instagram.com}}
+  - {name: Youtube 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.googlevideo.com}}
+  - {name: Whatsapp 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
+  - {name: Joox 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.joox.com}}
+  - {name: Unligame 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: www.pubgmobile.com, udp: true}
+  - {name: Conference 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: www.zoom.us, udp: true}
+  - {name: Line 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: line.me, udp: true}
+  - {name: Tiktok 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: p16-va-default.akamaized.net, udp: true}
+  - {name: Instagram 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: www.instagram.com, udp: true}
+  - {name: Youtube 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: www.googlevideo.com, udp: true}
+  - {name: Whatsapp 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: web.whatsapp.com, udp: true}
+  - {name: Joox 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: www.joox.com, udp: true}
   - {name: Indosat Opok, server: covid19.go.id, port: 80, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: , network: ws, ws-path: /2c994e3b/, ws-headers: {Host: vmess.bplfn.gescripter.xyz}}
 
 proxy-groups:
