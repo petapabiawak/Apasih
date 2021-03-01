@@ -7,7 +7,7 @@ external-controller: 127.0.0.1:9090
 
 proxies:
   - {name: Unligame 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
-  - {name: Conference 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
+  - {name: Conference 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: www.zoom.us, alpn: , skip-cert-verify: true}
   - {name: Line 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
   - {name: Tiktok 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
   - {name: Instagram 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
@@ -15,7 +15,7 @@ proxies:
   - {name: Whatsapp 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: Joox 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 2ad1ce40-79bc-11eb-bff9-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
   - {name: Unligame 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 5541a030-79bc-11eb-8f21-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
-  - {name: Conference 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 5541a030-79bc-11eb-8f21-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
+  - {name: Conference 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 5541a030-79bc-11eb-8f21-1239d0255272, udp: true, sni: www.zoom.us, alpn: , skip-cert-verify: true}
   - {name: Line 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 5541a030-79bc-11eb-8f21-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
   - {name: Tiktok 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 5541a030-79bc-11eb-8f21-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
   - {name: Instagram 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 5541a030-79bc-11eb-8f21-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
