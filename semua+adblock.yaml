@@ -17,14 +17,14 @@ proxies:
   - {name: Youtube 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.googlevideo.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.googlevideo.com}}
   - {name: Whatsapp 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: web.whatsapp.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: web.whatsapp.com}}
   - {name: Joox 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.joox.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.joox.com}}
-  - {name: Unligame 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 58297d60-7b73-11eb-889a-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
-  - {name: Conference 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 58297d60-7b73-11eb-889a-1239d0255272, udp: true, sni: www.zoom.us, alpn: , skip-cert-verify: true}
-  - {name: Line 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 58297d60-7b73-11eb-889a-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
-  - {name: Tiktok 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 58297d60-7b73-11eb-889a-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
-  - {name: Instagram 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 58297d60-7b73-11eb-889a-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
-  - {name: Youtube 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 58297d60-7b73-11eb-889a-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
-  - {name: Whatsapp 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 58297d60-7b73-11eb-889a-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
-  - {name: Joox 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 58297d60-7b73-11eb-889a-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
+  - {name: Unligame 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: cbf856e0-7c34-11eb-a63d-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
+  - {name: Conference 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: cbf856e0-7c34-11eb-a63d-1239d0255272, udp: true, sni: www.zoom.us, alpn: , skip-cert-verify: true}
+  - {name: Line 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: cbf856e0-7c34-11eb-a63d-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
+  - {name: Tiktok 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: cbf856e0-7c34-11eb-a63d-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
+  - {name: Instagram 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: cbf856e0-7c34-11eb-a63d-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
+  - {name: Youtube 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: cbf856e0-7c34-11eb-a63d-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
+  - {name: Whatsapp 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: cbf856e0-7c34-11eb-a63d-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
+  - {name: Joox 2, server: id2-trojan.bonds.id, port: 443, type: trojan, password: cbf856e0-7c34-11eb-a63d-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
   - {name: Unligame 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.pubgmobile.com}}
   - {name: Conference 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.zoom.us}}
   - {name: Line 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: line.me}}
