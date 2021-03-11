@@ -464,10 +464,9 @@ rules:
   - DOMAIN-KEYWORD,youtube,BYPASS
   - DOMAIN-SUFFIX,youtube.com,BYPASS
   - DOMAIN-SUFFIX,youtu.be,BYPASS
+  - DOMAIN-SUFFIX,yt.be,BYPASS
   - DOMAIN-SUFFIX,googlevideo.com,BYPASS
   - DOMAIN-SUFFIX,ytimg.com,BYPASS
-  - DOMAIN-SUFFIX,ggpht.com,BYPASS
-  - DOMAIN-SUFFIX,gvt2.com,BYPASS
   - DOMAIN,youtubei.googleapis.com,BYPASS
   # > NIMOTV
   - DOMAIN-KEYWORD,nimo,BYPASS
@@ -520,22 +519,55 @@ rules:
   - DOMAIN-SUFFIX,sourceforge.net,BYPASS
   - DOMAIN-SUFFIX,zippyshare.com,BYPASS
   # > GOOGLE
-  - DOMAIN,drive.google.com,BYPASS
-  - DOMAIN,mail.google.com,BYPASS
-  - DOMAIN,maps.google.com,BYPASS
-  - DOMAIN,classroom.google.com,BYPASS
+  - IP-CIDR,35.190.247.0/24,BYPASS
+  - IP-CIDR,64.233.160.0/19,BYPASS
+  - IP-CIDR,66.102.0.0/20,BYPASS
+  - IP-CIDR,66.249.80.0/20,BYPASS
+  - IP-CIDR,72.14.192.0/18,BYPASS
+  - IP-CIDR,74.125.0.0/16,BYPASS
+  - IP-CIDR,108.177.8.0/21,BYPASS
+  - IP-CIDR,172.217.0.0/16,BYPASS
+  - IP-CIDR,173.194.0.0/16,BYPASS
+  - IP-CIDR,209.85.128.0/17,BYPASS
+  - IP-CIDR,216.58.192.0/19,BYPASS
+  - IP-CIDR,216.239.32.0/19,BYPASS
+  - DOMAIN-KEYWORD,google,BYPASS
+  - DOMAIN-SUFFIX,googleapis.com,BYPASS
+  - DOMAIN-SUFFIX,google.com,BYPASS
+  - DOMAIN-SUFFIX,google.co.id,BYPASS
   - DOMAIN-SUFFIX,googleusercontent.com,BYPASS
+  - DOMAIN-SUFFIX,chrome.com,BYPASS
+  - DOMAIN-SUFFIX,chromeexperiments.com,BYPASS
+  - DOMAIN-SUFFIX,chromestatus.com,BYPASS
+  - DOMAIN-SUFFIX,chromium.org,BYPASS
+  - DOMAIN-SUFFIX,gstatic.com,BYPASS
+  - DOMAIN-SUFFIX,gv.com,BYPASS
+  - DOMAIN-SUFFIX,gvt1.com,BYPASS
+  - DOMAIN-SUFFIX,gvt2.com,BYPASS
+  - DOMAIN-SUFFIX,ggpht.com,BYPASS
+  - DOMAIN-SUFFIX,gmodules.com,BYPASS
   # > LOCAL AREA NETWORK
   - DOMAIN-KEYWORD,announce,DIRECT,no-resolve
   - DOMAIN-KEYWORD,torrent,DIRECT,no-resolve
   - DOMAIN-KEYWORD,tracker,DIRECT,no-resolve
   - DOMAIN-SUFFIX,smtp,DIRECT,no-resolve
   - DOMAIN-SUFFIX,local,DIRECT,no-resolve
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,0.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.0.0.0/24,DIRECT,no-resolve
+  - IP-CIDR,192.0.2.0/24,DIRECT,no-resolve
+  - IP-CIDR,192.88.99.0/24,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,198.18.0.0/15,DIRECT,no-resolve
+  - IP-CIDR,198.51.100.0/24,DIRECT,no-resolve
+  - IP-CIDR,203.0.113.0/24,DIRECT,no-resolve
+  - IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
+  - IP-CIDR,240.0.0.0/4,DIRECT,no-resolve
+  - IP-CIDR,255.255.255.255/32,DIRECT,no-resolve
   - IP-CIDR6,::1/128,DIRECT,no-resolve
   - IP-CIDR6,fc00::/7,DIRECT,no-resolve
   - IP-CIDR6,fe80::/10,DIRECT,no-resolve
