@@ -513,7 +513,19 @@ rules:
   - DOMAIN-SUFFIX,akamaized.net,SOSMED
   - DOMAIN-SUFFIX,akamaihd.com,SOSMED
   - DOMAIN-SUFFIX,akamaihd.net,SOSMED
-
+  # > DOWNLOAD
+  - DOMAIN-SUFFIX,pling.com,BYPASS
+  - DOMAIN-SUFFIX,cdnrobot.xyz,BYPASS
+  - DOMAIN-SUFFIX,mediafire.com,BYPASS
+  - DOMAIN-SUFFIX,sourceforge.net,BYPASS
+  - DOMAIN-SUFFIX,zippyshare.com,BYPASS
+  # > GOOGLE
+  - DOMAIN,drive.google.com,BYPASS
+  - DOMAIN,mail.google.com,BYPASS
+  - DOMAIN,maps.google.com,BYPASS
+  - DOMAIN,classroom.google.com,BYPASS
+  - DOMAIN-SUFFIX,googleusercontent.com,BYPASS
+  # > LOCAL AREA NETWORK
   - DOMAIN-KEYWORD,announce,DIRECT,no-resolve
   - DOMAIN-KEYWORD,torrent,DIRECT,no-resolve
   - DOMAIN-KEYWORD,tracker,DIRECT,no-resolve
