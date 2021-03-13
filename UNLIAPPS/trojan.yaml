@@ -444,6 +444,27 @@ rules:
   - DOMAIN-SUFFIX,gvt2.com,GOOGLE
   - DOMAIN-SUFFIX,ggpht.com,GOOGLE
   - DOMAIN-SUFFIX,gmodules.com,GOOGLE
+  # > IKLAN
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,analysis,REJECT
+  - DOMAIN-SUFFIX,3lift.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-SUFFIX,ad.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,admob.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,ad.intl.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,data.mistat.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,tracking.miui.com,REJECT
+  - DOMAIN,adv.sec.miui.com,REJECT
+  - DOMAIN,adv.sec.intl.miui.com,REJECT
+  - DOMAIN,o2o.api.xiaomi.com,REJECT
   # > LOCAL AREA NETWORK
   - DOMAIN-KEYWORD,announce,DIRECT,no-resolve
   - DOMAIN-KEYWORD,torrent,DIRECT,no-resolve
