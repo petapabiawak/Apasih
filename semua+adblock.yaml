@@ -53,7 +53,9 @@ proxy-groups:
       - SS
       - SSR
   - name: VMESS
-    type: select
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     proxies:
       - Edukasi 1
       - Edukasi 2
@@ -68,7 +70,9 @@ proxy-groups:
       - Joox 1
       - Indosat Opok
   - name: TROJAN
-    type: select
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     proxies:
       - Unligame 2
       - Conference 2
@@ -79,7 +83,9 @@ proxy-groups:
       - Whatsapp 2
       - Joox 2
   - name: SS
-    type: select
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     proxies:
       - Unligame 3
       - Conference 3
@@ -90,7 +96,9 @@ proxy-groups:
       - Whatsapp 3
       - Joox 3
   - name: SSR
-    type: select
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     proxies:
       - Unligame 4
       - Conference 4
