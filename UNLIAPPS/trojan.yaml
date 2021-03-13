@@ -1,0 +1,475 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+proxies:
+  - {name: Unligame 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 381a3720-82a4-11eb-ab13-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
+  - {name: Conference 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 381a3720-82a4-11eb-ab13-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
+  - {name: Line 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 381a3720-82a4-11eb-ab13-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
+  - {name: Tiktok 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 381a3720-82a4-11eb-ab13-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
+  - {name: Instagram 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 381a3720-82a4-11eb-ab13-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
+  - {name: Youtube 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 381a3720-82a4-11eb-ab13-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
+  - {name: Whatsapp 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 381a3720-82a4-11eb-ab13-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
+  - {name: Joox 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: 381a3720-82a4-11eb-ab13-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
+  - {name: Unligame 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: b52c6a60-7c34-11eb-ac75-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
+  - {name: Conference 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: b52c6a60-7c34-11eb-ac75-1239d0255272, udp: true, sni: teams.microsoft.com, alpn: , skip-cert-verify: true}
+  - {name: Line 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: b52c6a60-7c34-11eb-ac75-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
+  - {name: Tiktok 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: b52c6a60-7c34-11eb-ac75-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
+  - {name: Instagram 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: b52c6a60-7c34-11eb-ac75-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
+  - {name: Youtube 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: b52c6a60-7c34-11eb-ac75-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
+  - {name: Whatsapp 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: b52c6a60-7c34-11eb-ac75-1239d0255272, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
+  - {name: Joox 2, server: sg3-trojan.bonds.id, port: 443, type: trojan, password: b52c6a60-7c34-11eb-ac75-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
+  - {name: Ip Indonesia, server: id2-trojan.bonds.id, port: 443, type: trojan, password: f89d7680-8280-11eb-91ab-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - INDONESIA
+      - SINGAPURA
+  - name: INDONESIA
+    type: select
+    proxies:
+      - Unligame 1
+      - Conference 1
+      - Line 1
+      - Tiktok 1
+      - Instagram 1
+      - Youtube 1
+      - Whatsapp 1
+      - Joox 1
+  - name: SINGAPURA
+    type: select
+    proxies:
+      - Unligame 2
+      - Conference 2
+      - Line 2
+      - Tiktok 2
+      - Instagram 2
+      - Youtube 2
+      - Whatsapp 2
+      - Joox 2
+  - name: BYPASS
+    type: select
+    proxies:
+      - Ip Indonesia
+      - PROXY
+      - DIRECT
+  - name: GOOGLE
+    type: select
+    proxies:
+      - Ip Indonesia
+      - PROXY
+      - DIRECT
+  - name: TELKOMSEL
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
+  - name: MARKET
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
+  - name: CHAT
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
+  - name: SOSMED
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
+
+rules:
+  # > MARKET PLACE
+  - DOMAIN-KEYWORD,ovo,MARKET
+  - DOMAIN-SUFFIX,ovo.id,MARKET
+  - DOMAIN-KEYWORD,shopee,MARKET
+  - DOMAIN-SUFFIX,shopeemobile.com,MARKET
+  - DOMAIN-SUFFIX,shopee.co.id,MARKET
+  - DOMAIN-KEYWORD,tokopedia,MARKET
+  - DOMAIN-SUFFIX,tokopedia.com,MARKET
+  - DOMAIN-SUFFIX,tokopedia.net,MARKET
+  # > TELKOMSEL
+  - DOMAIN-KEYWORD,telkomsel,TELKOMSEL
+  - DOMAIN-SUFFIX,telkomsel.net,TELKOMSEL
+  - DOMAIN-SUFFIX,telkomsel.com,TELKOMSEL
+  - DOMAIN-SUFFIX,duniagames.co.id,TELKOMSEL
+  - DOMAIN-SUFFIX,langitmusik.co.id,TELKOMSEL
+  # > DISNEY HOTSTAR
+  - DOMAIN-KEYWORD,hotstar,TELKOMSEL
+  - DOMAIN-SUFFIX,hotstar.com,TELKOMSEL
+  - DOMAIN-SUFFIX,hotstarext.com,TELKOMSEL
+  - DOMAIN-SUFFIX,disney-plus.net,TELKOMSEL
+  - DOMAIN-SUFFIX,disneyplus.com,TELKOMSEL
+  - DOMAIN-SUFFIX,dssott.com,TELKOMSEL
+  - DOMAIN,cdn.registerdisney.go.com,TELKOMSEL
+  - DOMAIN,global.edge.bamgrid.com,TELKOMSEL
+  # > LINE
+  - DOMAIN-KEYWORD,line,CHAT
+  - DOMAIN-SUFFIX,line.me,CHAT
+  - DOMAIN-SUFFIX,line-apps.com,CHAT
+  - DOMAIN-SUFFIX,line-scdn.net,CHAT
+  - DOMAIN-SUFFIX,naver.jp,CHAT
+  # > FACEBOOK
+  - IP-CIDR,31.13.24.0/21,SOSMED,no-resolve
+  - IP-CIDR,31.13.64.0/18,SOSMED,no-resolve
+  - IP-CIDR,45.64.40.0/22,SOSMED,no-resolve
+  - IP-CIDR,66.220.144.0/20,SOSMED,no-resolve
+  - IP-CIDR,69.63.176.0/20,SOSMED,no-resolve
+  - IP-CIDR,69.171.224.0/19,SOSMED,no-resolve
+  - IP-CIDR,74.119.76.0/22,SOSMED,no-resolve
+  - IP-CIDR,103.4.96.0/22,SOSMED,no-resolve
+  - IP-CIDR,129.134.0.0/17,SOSMED,no-resolve
+  - IP-CIDR,157.240.0.0/17,SOSMED,no-resolve
+  - IP-CIDR,173.252.64.0/19,SOSMED,no-resolve
+  - IP-CIDR,173.252.96.0/19,SOSMED,no-resolve
+  - IP-CIDR,179.60.192.0/22,SOSMED,no-resolve
+  - IP-CIDR,185.60.216.0/22,SOSMED,no-resolve
+  - IP-CIDR,204.15.20.0/22,SOSMED,no-resolve
+  - DOMAIN-KEYWORD,facebook,SOSMED
+  - DOMAIN-SUFFIX,fbaddins.com,SOSMED
+  - DOMAIN-SUFFIX,fbsbx.com,SOSMED
+  - DOMAIN-SUFFIX,fbworkmail.com,SOSMED
+  - DOMAIN-SUFFIX,m.me,SOSMED
+  - DOMAIN-SUFFIX,messenger.com,SOSMED
+  - DOMAIN-SUFFIX,oculus.com,SOSMED
+  - DOMAIN-SUFFIX,oculuscdn.com,SOSMED
+  - DOMAIN-SUFFIX,rocksdb.org,SOSMED
+  - DOMAIN-SUFFIX,fb.careers,SOSMED
+  - DOMAIN-SUFFIX,fb.co,SOSMED
+  - DOMAIN-SUFFIX,fb.com,SOSMED
+  - DOMAIN-SUFFIX,fb.gg,SOSMED
+  - DOMAIN-SUFFIX,fb.me,SOSMED
+  - DOMAIN-SUFFIX,fbcdn.com,SOSMED
+  - DOMAIN-SUFFIX,fbcdn.net,SOSMED
+  - DOMAIN-SUFFIX,facebook-corp.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-covid-19.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-ebook.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-forum.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-inc.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-login.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-newsroom.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-newsroom.org,SOSMED
+  - DOMAIN-SUFFIX,facebook-pmdcenter.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-pmdcenter.net,SOSMED
+  - DOMAIN-SUFFIX,facebook-pmdcenter.org,SOSMED
+  - DOMAIN-SUFFIX,facebook-privacy.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-program.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-studio.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-support.org,SOSMED
+  - DOMAIN-SUFFIX,facebook-texas-holdem.com,SOSMED
+  - DOMAIN-SUFFIX,facebook-texas-holdem.net,SOSMED
+  - DOMAIN-SUFFIX,facebook.be,SOSMED
+  - DOMAIN-SUFFIX,facebook.cc,SOSMED
+  - DOMAIN-SUFFIX,facebook.com,SOSMED
+  - DOMAIN-SUFFIX,facebook.design,SOSMED
+  - DOMAIN-SUFFIX,facebook.it,SOSMED
+  - DOMAIN-SUFFIX,facebook.net,SOSMED
+  - DOMAIN-SUFFIX,facebook.org,SOSMED
+  - DOMAIN-SUFFIX,facebook.shop,SOSMED
+  - DOMAIN-SUFFIX,facebook.tv,SOSMED
+  - DOMAIN-SUFFIX,facebook.wang,SOSMED
+  - DOMAIN-SUFFIX,facebook123.org,SOSMED
+  - DOMAIN-SUFFIX,facebook30.com,SOSMED
+  - DOMAIN-SUFFIX,facebook30.net,SOSMED
+  - DOMAIN-SUFFIX,facebook30.org,SOSMED
+  - DOMAIN-SUFFIX,facebook4business.com,SOSMED
+  - DOMAIN-SUFFIX,facebookads.com,SOSMED
+  - DOMAIN-SUFFIX,facebookadvertisingsecrets.com,SOSMED
+  - DOMAIN-SUFFIX,facebookappcenter.info,SOSMED
+  - DOMAIN-SUFFIX,facebookappcenter.net,SOSMED
+  - DOMAIN-SUFFIX,facebookappcenter.org,SOSMED
+  - DOMAIN-SUFFIX,facebookatschool.com,SOSMED
+  - DOMAIN-SUFFIX,facebookawards.com,SOSMED
+  - DOMAIN-SUFFIX,facebookblueprint.net,SOSMED
+  - DOMAIN-SUFFIX,facebookbrand.com,SOSMED
+  - DOMAIN-SUFFIX,facebookbrand.net,SOSMED
+  - DOMAIN-SUFFIX,facebookcanadianelectionintegrityinitiative.com,SOSMED
+  - DOMAIN-SUFFIX,facebookcareer.com,SOSMED
+  - DOMAIN-SUFFIX,facebookcheats.com,SOSMED
+  - DOMAIN-SUFFIX,facebookck.com,SOSMED
+  - DOMAIN-SUFFIX,facebookclub.com,SOSMED
+  - DOMAIN-SUFFIX,facebookcom.com,SOSMED
+  - DOMAIN-SUFFIX,facebookconnect.com,SOSMED
+  - DOMAIN-SUFFIX,facebookconsultant.org,SOSMED
+  - DOMAIN-SUFFIX,facebookcoronavirus.com,SOSMED
+  - DOMAIN-SUFFIX,facebookcovers.org,SOSMED
+  - DOMAIN-SUFFIX,facebookcredits.info,SOSMED
+  - DOMAIN-SUFFIX,facebookdating.net,SOSMED
+  - DOMAIN-SUFFIX,facebookdevelopergarage.com,SOSMED
+  - DOMAIN-SUFFIX,facebookdusexe.org,SOSMED
+  - DOMAIN-SUFFIX,facebookemail.com,SOSMED
+  - DOMAIN-SUFFIX,facebookenespanol.com,SOSMED
+  - DOMAIN-SUFFIX,facebookexchange.com,SOSMED
+  - DOMAIN-SUFFIX,facebookexchange.net,SOSMED
+  - DOMAIN-SUFFIX,facebookfacebook.com,SOSMED
+  - DOMAIN-SUFFIX,facebookflow.com,SOSMED
+  - DOMAIN-SUFFIX,facebookgames.com,SOSMED
+  - DOMAIN-SUFFIX,facebookgraphsearch.com,SOSMED
+  - DOMAIN-SUFFIX,facebookgraphsearch.info,SOSMED
+  - DOMAIN-SUFFIX,facebookgroups.com,SOSMED
+  - DOMAIN-SUFFIX,facebookhome.cc,SOSMED
+  - DOMAIN-SUFFIX,facebookhome.com,SOSMED
+  - DOMAIN-SUFFIX,facebookhome.info,SOSMED
+  - DOMAIN-SUFFIX,facebookhub.com,SOSMED
+  - DOMAIN-SUFFIX,facebooki.com,SOSMED
+  - DOMAIN-SUFFIX,facebookinc.com,SOSMED
+  - DOMAIN-SUFFIX,facebookland.com,SOSMED
+  - DOMAIN-SUFFIX,facebooklikeexchange.com,SOSMED
+  - DOMAIN-SUFFIX,facebooklive.com,SOSMED
+  - DOMAIN-SUFFIX,facebooklivestaging.net,SOSMED
+  - DOMAIN-SUFFIX,facebooklivestaging.org,SOSMED
+  - DOMAIN-SUFFIX,facebooklogin.com,SOSMED
+  - DOMAIN-SUFFIX,facebooklogin.info,SOSMED
+  - DOMAIN-SUFFIX,facebookloginhelp.net,SOSMED
+  - DOMAIN-SUFFIX,facebooklogs.com,SOSMED
+  - DOMAIN-SUFFIX,facebookmail.com,SOSMED
+  - DOMAIN-SUFFIX,facebookmail.tv,SOSMED
+  - DOMAIN-SUFFIX,facebookmanager.info,SOSMED
+  - DOMAIN-SUFFIX,facebookmarketing.info,SOSMED
+  - DOMAIN-SUFFIX,facebookmarketingpartner.com,SOSMED
+  - DOMAIN-SUFFIX,facebookmarketingpartners.com,SOSMED
+  - DOMAIN-SUFFIX,facebookmobile.com,SOSMED
+  - DOMAIN-SUFFIX,facebookmsn.com,SOSMED
+  - DOMAIN-SUFFIX,facebooknews.com,SOSMED
+  - DOMAIN-SUFFIX,facebooknfl.com,SOSMED
+  - DOMAIN-SUFFIX,facebooknude.com,SOSMED
+  - DOMAIN-SUFFIX,facebookofsex.com,SOSMED
+  - DOMAIN-SUFFIX,facebookook.com,SOSMED
+  - DOMAIN-SUFFIX,facebookpaper.com,SOSMED
+  - DOMAIN-SUFFIX,facebookpay.com,SOSMED
+  - DOMAIN-SUFFIX,facebookphonenumber.net,SOSMED
+  - DOMAIN-SUFFIX,facebookphoto.com,SOSMED
+  - DOMAIN-SUFFIX,facebookphotos.com,SOSMED
+  - DOMAIN-SUFFIX,facebookpmdcenter.com,SOSMED
+  - DOMAIN-SUFFIX,facebookpoke.net,SOSMED
+  - DOMAIN-SUFFIX,facebookpoke.org,SOSMED
+  - DOMAIN-SUFFIX,facebookpoker.info,SOSMED
+  - DOMAIN-SUFFIX,facebookpokerchips.info,SOSMED
+  - DOMAIN-SUFFIX,facebookporn.net,SOSMED
+  - DOMAIN-SUFFIX,facebookporn.org,SOSMED
+  - DOMAIN-SUFFIX,facebookporno.net,SOSMED
+  - DOMAIN-SUFFIX,facebookportal.com,SOSMED
+  - DOMAIN-SUFFIX,facebookquotes4u.com,SOSMED
+  - DOMAIN-SUFFIX,facebooks.com,SOSMED
+  - DOMAIN-SUFFIX,facebooksafety.com,SOSMED
+  - DOMAIN-SUFFIX,facebooksecurity.net,SOSMED
+  - DOMAIN-SUFFIX,facebookshop.com,SOSMED
+  - DOMAIN-SUFFIX,facebooksignup.net,SOSMED
+  - DOMAIN-SUFFIX,facebooksite.net,SOSMED
+  - DOMAIN-SUFFIX,facebookstories.com,SOSMED
+  - DOMAIN-SUFFIX,facebookstudios.net,SOSMED
+  - DOMAIN-SUFFIX,facebookstudios.org,SOSMED
+  - DOMAIN-SUFFIX,facebooksupplier.com,SOSMED
+  - DOMAIN-SUFFIX,facebooksuppliers.com,SOSMED
+  - DOMAIN-SUFFIX,facebookswagemea.com,SOSMED
+  - DOMAIN-SUFFIX,facebookswagstore.com,SOSMED
+  - DOMAIN-SUFFIX,facebooksz.com,SOSMED
+  - DOMAIN-SUFFIX,facebookthreads.net,SOSMED
+  - DOMAIN-SUFFIX,facebooktv.net,SOSMED
+  - DOMAIN-SUFFIX,facebooktv.org,SOSMED
+  - DOMAIN-SUFFIX,facebookvacation.com,SOSMED
+  - DOMAIN-SUFFIX,facebookw.com,SOSMED
+  - DOMAIN-SUFFIX,facebookwork.com,SOSMED
+  - DOMAIN-SUFFIX,facebookworld.com,SOSMED
+  # > INSTAGRAM
+  - DOMAIN-KEYWORD,instagram,SOSMED
+  - DOMAIN-SUFFIX,instagram-brand.com,SOSMED
+  - DOMAIN-SUFFIX,instagram-engineering.com,SOSMED
+  - DOMAIN-SUFFIX,instagram-help.com,SOSMED
+  - DOMAIN-SUFFIX,instagram-press.com,SOSMED
+  - DOMAIN-SUFFIX,instagram-press.net,SOSMED
+  - DOMAIN-SUFFIX,instagram.com,SOSMED
+  - DOMAIN-SUFFIX,instagramci.com,SOSMED
+  - DOMAIN-SUFFIX,instagramcn.com,SOSMED
+  - DOMAIN-SUFFIX,instagramdi.com,SOSMED
+  - DOMAIN-SUFFIX,instagramhashtags.net,SOSMED
+  - DOMAIN-SUFFIX,instagramhilecim.com,SOSMED
+  - DOMAIN-SUFFIX,instagramhilesi.org,SOSMED
+  - DOMAIN-SUFFIX,instagramium.com,SOSMED
+  - DOMAIN-SUFFIX,instagramizlenme.com,SOSMED
+  - DOMAIN-SUFFIX,instagramkusu.com,SOSMED
+  - DOMAIN-SUFFIX,instagramlogin.com,SOSMED
+  - DOMAIN-SUFFIX,instagramm.com,SOSMED
+  - DOMAIN-SUFFIX,instagramn.com,SOSMED
+  - DOMAIN-SUFFIX,instagrampartners.com,SOSMED
+  - DOMAIN-SUFFIX,instagramphoto.com,SOSMED
+  - DOMAIN-SUFFIX,instagramq.com,SOSMED
+  - DOMAIN-SUFFIX,instagramsepeti.com,SOSMED
+  - DOMAIN-SUFFIX,instagramtakipcisatinal.net,SOSMED
+  - DOMAIN-SUFFIX,instagramtakiphilesi.com,SOSMED
+  - DOMAIN-SUFFIX,instagramtips.com,SOSMED
+  - DOMAIN-SUFFIX,instagramtr.com,SOSMED
+  - DOMAIN-SUFFIX,ig.com,SOSMED
+  - DOMAIN-SUFFIX,ig.me,SOSMED
+  - DOMAIN-SUFFIX,igcd.net,SOSMED
+  - DOMAIN-SUFFIX,igcdn.com,SOSMED
+  - DOMAIN-SUFFIX,cdninstagram.com,SOSMED
+  # > WHATSAPP
+  - DOMAIN-KEYWORD,whatsapp,CHAT
+  - DOMAIN-SUFFIX,wa.me,CHAT
+  - DOMAIN-SUFFIX,whatsapp-plus.info,CHAT
+  - DOMAIN-SUFFIX,whatsapp-plus.me,CHAT
+  - DOMAIN-SUFFIX,whatsapp-plus.net,CHAT
+  - DOMAIN-SUFFIX,whatsapp.cc,CHAT
+  - DOMAIN-SUFFIX,whatsapp.com,CHAT
+  - DOMAIN-SUFFIX,whatsapp.info,CHAT
+  - DOMAIN-SUFFIX,whatsapp.net,CHAT
+  - DOMAIN-SUFFIX,whatsapp.org,CHAT
+  - DOMAIN-SUFFIX,whatsapp.tv,CHAT
+  - DOMAIN-SUFFIX,whatsappbrand.com,CHAT
+  # > TWITTER
+  - IP-CIDR,69.195.160.0/19,BYPASS
+  - IP-CIDR,104.244.42.0/21,BYPASS
+  - IP-CIDR,192.133.76.0/22,BYPASS
+  - IP-CIDR,199.16.156.0/22,BYPASS
+  - IP-CIDR,199.59.148.0/22,BYPASS
+  - IP-CIDR,199.96.56.0/21,BYPASS
+  - IP-CIDR,202.160.128.0/22,BYPASS
+  - IP-CIDR,209.237.192.0/19,BYPASS
+  - DOMAIN-SUFFIX,pscp.tv,BYPASS
+  - DOMAIN-SUFFIX,periscope.tv,BYPASS
+  - DOMAIN-SUFFIX,t.co,BYPASS
+  - DOMAIN-SUFFIX,twimg.co,BYPASS
+  - DOMAIN-SUFFIX,twimg.com,BYPASS
+  - DOMAIN-SUFFIX,twitpic.com,BYPASS
+  - DOMAIN-SUFFIX,vine.co,BYPASS
+  - DOMAIN-KEYWORD,twitter,BYPASS
+  # > TELEGRAM
+  - DOMAIN-SUFFIX,telegra.ph,BYPASS
+  - DOMAIN-SUFFIX,telegram.org,BYPASS
+  - IP-CIDR,91.108.4.0/22,BYPASS,no-resolve
+  - IP-CIDR,91.108.8.0/22,BYPASS,no-resolve
+  - IP-CIDR,91.108.12.0/22,BYPASS,no-resolve
+  - IP-CIDR,91.108.16.0/22,BYPASS,no-resolve
+  - IP-CIDR,91.108.56.0/22,BYPASS,no-resolve
+  - IP-CIDR,149.154.160.0/20,BYPASS,no-resolve
+  - IP-CIDR,2001:b28:f23d::/48,BYPASS,no-resolve
+  - IP-CIDR,2001:b28:f23f::/48,BYPASS,no-resolve
+  - IP-CIDR,2001:67c:4e8::/48,BYPASS,no-resolve
+  - DOMAIN-SUFFIX,t.me,BYPASS
+  - DOMAIN-SUFFIX,tdesktop.com,BYPASS
+  - DOMAIN-SUFFIX,telegra.ph,BYPASS
+  - DOMAIN-SUFFIX,telegram.me,BYPASS
+  - DOMAIN-SUFFIX,telegram.org,BYPASS
+  # > YOUTUBE
+  - DOMAIN-KEYWORD,youtube,BYPASS
+  - DOMAIN-SUFFIX,youtube.com,BYPASS
+  - DOMAIN-SUFFIX,youtu.be,BYPASS
+  - DOMAIN-SUFFIX,yt.be,BYPASS
+  - DOMAIN-SUFFIX,googlevideo.com,BYPASS
+  - DOMAIN-SUFFIX,ytimg.com,BYPASS
+  - DOMAIN,youtubei.googleapis.com,BYPASS
+  # > NIMOTV
+  - DOMAIN-KEYWORD,nimo,BYPASS
+  - DOMAIN-SUFFIX,nimo.tv,BYPASS
+  - DOMAIN-SUFFIX,master.live,BYPASS
+  # > VIU
+  - DOMAIN-KEYWORD,viu,BYPASS
+  - DOMAIN-SUFFIX,viu.com,BYPASS
+  - DOMAIN-SUFFIX,viu.tv,BYPASS
+  - DOMAIN,api.viu.now.com,BYPASS
+  - DOMAIN,d1k2us671qcoau.cloudfront.net,BYPASS
+  - DOMAIN,d2anahhhmp1ffz.cloudfront.net,BYPASS
+  - DOMAIN,dfp6rglgjqszk.cloudfront.net,BYPASS
+  # > FOX+
+  - DOMAIN-KEYWORD,foxplus,BYPASS
+  - DOMAIN-SUFFIX,config.fox.com,BYPASS
+  - DOMAIN-SUFFIX,emome.net,BYPASS
+  - DOMAIN-SUFFIX,fox.com,BYPASS
+  - DOMAIN-SUFFIX,foxdcg.com,BYPASS
+  - DOMAIN-SUFFIX,foxnow.com,BYPASS
+  - DOMAIN-SUFFIX,foxplus.com,BYPASS
+  - DOMAIN-SUFFIX,foxplay.com,BYPASS
+  - DOMAIN-SUFFIX,ipinfo.io,BYPASS
+  - DOMAIN-SUFFIX,mstage.io,BYPASS
+  - DOMAIN-SUFFIX,now.com,BYPASS
+  - DOMAIN-SUFFIX,theplatform.com,BYPASS
+  - DOMAIN-SUFFIX,urlload.net,BYPASS
+  # > HBO && HBO Go
+  - DOMAIN-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,BYPASS
+  - DOMAIN-SUFFIX,hbo.com,BYPASS
+  - DOMAIN-SUFFIX,hboasia.com,BYPASS
+  - DOMAIN-SUFFIX,hbogo.com,BYPASS
+  - DOMAIN-SUFFIX,hbogoasia.hk,BYPASS
+  # > NETFLIX
+  - DOMAIN-SUFFIX,netflix.com,BYPASS
+  - DOMAIN-SUFFIX,netflix.net,BYPASS
+  - DOMAIN-SUFFIX,nflxext.com,BYPASS
+  - DOMAIN-SUFFIX,nflximg.com,BYPASS
+  - DOMAIN-SUFFIX,nflximg.net,BYPASS
+  - DOMAIN-SUFFIX,nflxso.net,BYPASS
+  - DOMAIN-SUFFIX,nflxvideo.net,BYPASS
+  # > AKAMAI
+  - DOMAIN-SUFFIX,akamaized.net,SOSMED
+  - DOMAIN-SUFFIX,akamaihd.com,SOSMED
+  - DOMAIN-SUFFIX,akamaihd.net,SOSMED
+  # > DOWNLOAD
+  - DOMAIN-SUFFIX,pling.com,BYPASS
+  - DOMAIN-SUFFIX,cdnrobot.xyz,BYPASS
+  - DOMAIN-SUFFIX,mediafire.com,BYPASS
+  - DOMAIN-SUFFIX,sourceforge.net,BYPASS
+  - DOMAIN-SUFFIX,zippyshare.com,BYPASS
+  # > GOOGLE
+  - IP-CIDR,35.190.247.0/24,GOOGLE
+  - IP-CIDR,64.233.160.0/19,GOOGLE
+  - IP-CIDR,66.102.0.0/20,GOOGLE
+  - IP-CIDR,66.249.80.0/20,GOOGLE
+  - IP-CIDR,72.14.192.0/18,GOOGLE
+  - IP-CIDR,74.125.0.0/16,GOOGLE
+  - IP-CIDR,108.177.8.0/21,GOOGLE
+  - IP-CIDR,172.217.0.0/16,GOOGLE
+  - IP-CIDR,173.194.0.0/16,GOOGLE
+  - IP-CIDR,209.85.128.0/17,GOOGLE
+  - IP-CIDR,216.58.192.0/19,GOOGLE
+  - IP-CIDR,216.239.32.0/19,GOOGLE
+  - DOMAIN-KEYWORD,google,GOOGLE
+  - DOMAIN-SUFFIX,googleapis.com,GOOGLE
+  - DOMAIN-SUFFIX,google.com,GOOGLE
+  - DOMAIN-SUFFIX,google.co.id,GOOGLE
+  - DOMAIN-SUFFIX,googleusercontent.com,GOOGLE
+  - DOMAIN-SUFFIX,chrome.com,GOOGLE
+  - DOMAIN-SUFFIX,chromeexperiments.com,GOOGLE
+  - DOMAIN-SUFFIX,chromestatus.com,GOOGLE
+  - DOMAIN-SUFFIX,chromium.org,GOOGLE
+  - DOMAIN-SUFFIX,gstatic.com,GOOGLE
+  - DOMAIN-SUFFIX,gv.com,GOOGLE
+  - DOMAIN-SUFFIX,gvt1.com,GOOGLE
+  - DOMAIN-SUFFIX,gvt2.com,GOOGLE
+  - DOMAIN-SUFFIX,ggpht.com,GOOGLE
+  - DOMAIN-SUFFIX,gmodules.com,GOOGLE
+  # > LOCAL AREA NETWORK
+  - DOMAIN-KEYWORD,announce,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,torrent,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,tracker,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,smtp,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,local,DIRECT,no-resolve
+  - IP-CIDR,0.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.0.0.0/24,DIRECT,no-resolve
+  - IP-CIDR,192.0.2.0/24,DIRECT,no-resolve
+  - IP-CIDR,192.88.99.0/24,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,198.18.0.0/15,DIRECT,no-resolve
+  - IP-CIDR,198.51.100.0/24,DIRECT,no-resolve
+  - IP-CIDR,203.0.113.0/24,DIRECT,no-resolve
+  - IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
+  - IP-CIDR,240.0.0.0/4,DIRECT,no-resolve
+  - IP-CIDR,255.255.255.255/32,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - GEOIP,IR,DIRECT
+  - MATCH,,PROXY,dns-failed
