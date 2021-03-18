@@ -144,3 +144,53 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
+- name: UNLIAPPS 3
+  type: ss
+  server: 139.59.112.120
+  port: 994
+  cipher: chacha20-ietf-poly1305
+  password: mbahhanif
+  plugin: obfs
+  plugin-opts:
+    mode: tls
+    host: www.instagram.com
+- name: UNLIGAME 3
+  type: ss
+  server: 139.59.112.120
+  port: 994
+  cipher: chacha20-ietf-poly1305
+  password: mbahhanif
+  plugin: obfs
+  plugin-opts:
+    mode: tls
+    host: www.pubgmobile.com
+- name: CONFERENCE 3
+  type: ss
+  server: 139.59.112.120
+  port: 994
+  cipher: chacha20-ietf-poly1305
+  password: mbahhanif
+  plugin: obfs
+  plugin-opts:
+    mode: tls
+    host: teams.microsoft.com
+- name: TIKTOK 3
+  type: ss
+  server: 139.59.112.120
+  port: 994
+  cipher: chacha20-ietf-poly1305
+  password: mbahhanif
+  plugin: obfs
+  plugin-opts:
+    mode: tls
+    host: p16-va-default.akamaized.net
+- name: CHAT 3
+  type: ss
+  server: 139.59.112.120
+  port: 994
+  cipher: chacha20-ietf-poly1305
+  password: mbahhanif
+  plugin: obfs
+  plugin-opts:
+    mode: tls
+    host: line.me
