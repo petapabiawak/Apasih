@@ -1,5 +1,5 @@
 proxies:
-- name: UNLIAPPS
+- name: UNLIAPPS 3
   type: ss
   server: 139.59.112.120
   port: 994
@@ -9,8 +9,7 @@ proxies:
   plugin-opts:
     mode: tls
     host: www.instagram.com
-
-- name: UNLIGAME
+- name: UNLIGAME 3
   type: ss
   server: 139.59.112.120
   port: 994
@@ -20,8 +19,7 @@ proxies:
   plugin-opts:
     mode: tls
     host: www.pubgmobile.com
-
-- name: CONFERENCE
+- name: CONFERENCE 3
   type: ss
   server: 139.59.112.120
   port: 994
@@ -31,8 +29,7 @@ proxies:
   plugin-opts:
     mode: tls
     host: teams.microsoft.com
-
-- name: TIKTOK
+- name: TIKTOK 3
   type: ss
   server: 139.59.112.120
   port: 994
@@ -42,8 +39,7 @@ proxies:
   plugin-opts:
     mode: tls
     host: p16-va-default.akamaized.net
-
-- name: CHAT
+- name: CHAT 3
   type: ss
   server: 139.59.112.120
   port: 994
