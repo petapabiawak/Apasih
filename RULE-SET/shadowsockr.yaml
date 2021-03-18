@@ -1,5 +1,5 @@
 proxies:
-- name: UNLIAPPS
+- name: UNLIAPPS 4
   type: ssr
   server: 139.59.112.120
   port: 1002
@@ -9,8 +9,7 @@ proxies:
   protocol: auth_sha1_v4
   obfs-param: www.instagram.com
   udp: true
-
-- name: UNLIGAME
+- name: UNLIGAME 4
   type: ssr
   server: 139.59.112.120
   port: 1002
@@ -20,8 +19,7 @@ proxies:
   protocol: auth_sha1_v4
   obfs-param: www.pubgmobile.com
   udp: true
-
-- name: CONFERENCE
+- name: CONFERENCE 4
   type: ssr
   server: 139.59.112.120
   port: 1002
@@ -31,8 +29,7 @@ proxies:
   protocol: auth_sha1_v4
   obfs-param: teams.microsoft.com
   udp: true
-
-- name: TIKTOK
+- name: TIKTOK 4
   type: ssr
   server: 139.59.112.120
   port: 1002
@@ -42,8 +39,7 @@ proxies:
   protocol: auth_sha1_v4
   obfs-param: p16-va-default.akamaized.net
   udp: true
-
-- name: CHAT
+- name: CHAT 4
   type: ssr
   server: 139.59.112.120
   port: 1002
