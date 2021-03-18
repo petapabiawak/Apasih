@@ -1,0 +1,91 @@
+proxies:
+- name: EDUKASI
+  type: vmess
+  server: robogr.ruangguru.com
+  port: 80
+  uuid: 5d30d644-af48-559d-2e1e-ed6a1f313902
+  alterId: 0
+  cipher: auto
+  udp: true
+  # tls: true
+  skip-cert-verify: true
+  servername: vmess.poslx.tunnelku.xyz
+  network: ws
+  ws-path: /d4181fdf03c4c/
+  ws-headers:
+    Host: vmess.poslx.tunnelku.xyz
+- name: UNLIAPPS 1
+  type: vmess
+  server: 35.223.231.211
+  port: 1443
+  uuid: 5d30d644-af48-559d-2e1e-ed6a1f313902
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: www.instagram.com
+  network: ws
+  ws-path: /d4181fdf03c4c/
+  ws-headers:
+    Host: www.instagram.com
+- name: UNLIGAME 1
+  type: vmess
+  server: 35.223.231.211
+  port: 1443
+  uuid: 5d30d644-af48-559d-2e1e-ed6a1f313902
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: www.pubgmobile.com
+  network: ws
+  ws-path: /d4181fdf03c4c/
+  ws-headers:
+    Host: www.pubgmobile.com
+- name: CONFERENCE 1
+  type: vmess
+  server: 35.223.231.211
+  port: 1443
+  uuid: 5d30d644-af48-559d-2e1e-ed6a1f313902
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: teams.microsoft.com
+  network: ws
+  ws-path: /d4181fdf03c4c/
+  ws-headers:
+    Host: teams.microsoft.com
+- name: TIKTOK 1
+  type: vmess
+  server: 35.223.231.211
+  port: 1443
+  uuid: 5d30d644-af48-559d-2e1e-ed6a1f313902
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: p16-va-default.akamaized.net
+  network: ws
+  ws-path: /d4181fdf03c4c/
+  ws-headers:
+    Host: p16-va-default.akamaized.net
+- name: CHAT 1
+  type: vmess
+  server: 35.223.231.211
+  port: 1443
+  uuid: 5d30d644-af48-559d-2e1e-ed6a1f313902
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: line.me
+  network: ws
+  ws-path: /d4181fdf03c4c/
+  ws-headers:
+    Host: line.me
