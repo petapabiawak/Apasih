@@ -1,0 +1,60 @@
+proxies:
+- name: UNLIAPPS
+  type: trojan
+  server: id2-trojan.bonds.id
+  port: 443
+  password: 4961b1e0-8666-11eb-b749-1239d0255272
+  udp: true
+  sni: www.instagram.com
+  alpn:
+    - h2
+    - http/1.1
+  skip-cert-verify: true
+
+- name: UNLIGAME
+  type: trojan
+  server: id2-trojan.bonds.id
+  port: 443
+  password: 4961b1e0-8666-11eb-b749-1239d0255272
+  udp: true
+  sni: www.pubgmobile.com
+  alpn:
+    - h2
+    - http/1.1
+  skip-cert-verify: true
+
+- name: CONFERENCE
+  type: trojan
+  server: id2-trojan.bonds.id
+  port: 443
+  password: 4961b1e0-8666-11eb-b749-1239d0255272
+  udp: true
+  sni: teams.microsoft.com
+  alpn:
+    - h2
+    - http/1.1
+  skip-cert-verify: true
+
+- name: TIKTOK
+  type: trojan
+  server: id2-trojan.bonds.id
+  port: 443
+  password: 4961b1e0-8666-11eb-b749-1239d0255272
+  udp: true
+  sni: p16-va-default.akamaized.net
+  alpn:
+    - h2
+    - http/1.1
+  skip-cert-verify: true
+
+- name: LINE
+  type: trojan
+  server: id2-trojan.bonds.id
+  port: 443
+  password: 4961b1e0-8666-11eb-b749-1239d0255272
+  udp: true
+  sni: line.me
+  alpn:
+    - h2
+    - http/1.1
+  skip-cert-verify: true

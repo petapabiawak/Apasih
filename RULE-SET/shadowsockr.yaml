@@ -1,0 +1,55 @@
+proxies:
+- name: UNLIAPPS
+  type: ssr
+  server: 139.59.112.120
+  port: 1002
+  cipher: aes-256-cfb
+  password: mbahhanif
+  obfs: tls1.2_ticket_auth
+  protocol: auth_sha1_v4
+  obfs-param: www.instagram.com
+  udp: true
+
+- name: UNLIGAME
+  type: ssr
+  server: 139.59.112.120
+  port: 1002
+  cipher: aes-256-cfb
+  password: mbahhanif
+  obfs: tls1.2_ticket_auth
+  protocol: auth_sha1_v4
+  obfs-param: www.pubgmobile.com
+  udp: true
+
+- name: CONFERENCE
+  type: ssr
+  server: 139.59.112.120
+  port: 1002
+  cipher: aes-256-cfb
+  password: mbahhanif
+  obfs: tls1.2_ticket_auth
+  protocol: auth_sha1_v4
+  obfs-param: teams.microsoft.com
+  udp: true
+
+- name: TIKTOK
+  type: ssr
+  server: 139.59.112.120
+  port: 1002
+  cipher: aes-256-cfb
+  password: mbahhanif
+  obfs: tls1.2_ticket_auth
+  protocol: auth_sha1_v4
+  obfs-param: p16-va-default.akamaized.net
+  udp: true
+
+- name: CHAT
+  type: ssr
+  server: 139.59.112.120
+  port: 1002
+  cipher: aes-256-cfb
+  password: mbahhanif
+  obfs: tls1.2_ticket_auth
+  protocol: auth_sha1_v4
+  obfs-param: line.me
+  udp: true
