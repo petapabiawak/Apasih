@@ -14,7 +14,6 @@ proxies:
   ws-path: /d4181fdf03c4c/
   ws-headers:
     Host: vmess.poslx.tunnelku.xyz
-
 - name: UNLIAPPS 1
   type: vmess
   server: 35.223.231.211
@@ -30,7 +29,6 @@ proxies:
   ws-path: /d4181fdf03c4c/
   ws-headers:
     Host: www.instagram.com
-
 - name: UNLIGAME 1
   type: vmess
   server: 35.223.231.211
@@ -46,7 +44,6 @@ proxies:
   ws-path: /d4181fdf03c4c/
   ws-headers:
     Host: www.pubgmobile.com
-
 - name: CONFERENCE 1
   type: vmess
   server: 35.223.231.211
@@ -62,7 +59,6 @@ proxies:
   ws-path: /d4181fdf03c4c/
   ws-headers:
     Host: teams.microsoft.com
-
 - name: TIKTOK 1
   type: vmess
   server: 35.223.231.211
@@ -78,7 +74,6 @@ proxies:
   ws-path: /d4181fdf03c4c/
   ws-headers:
     Host: p16-va-default.akamaized.net
-
 - name: CHAT 1
   type: vmess
   server: 35.223.231.211
