@@ -1,5 +1,5 @@
 proxies:
-- name: UNLIAPPS 1
+- name: UNLIAPPS 2
   type: trojan
   server: id2-trojan.bonds.id
   port: 443
@@ -10,7 +10,7 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
-- name: UNLIGAME 1
+- name: UNLIGAME 2
   type: trojan
   server: id2-trojan.bonds.id
   port: 443
@@ -21,7 +21,7 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
-- name: CONFERENCE 1
+- name: CONFERENCE 2
   type: trojan
   server: id2-trojan.bonds.id
   port: 443
@@ -32,7 +32,7 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
-- name: TIKTOK 1
+- name: TIKTOK 2
   type: trojan
   server: id2-trojan.bonds.id
   port: 443
@@ -43,7 +43,7 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
-- name: CHAT 1
+- name: CHAT 2
   type: trojan
   server: id2-trojan.bonds.id
   port: 443
