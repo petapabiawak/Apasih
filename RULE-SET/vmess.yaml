@@ -15,7 +15,7 @@ proxies:
   ws-headers:
     Host: vmess.poslx.tunnelku.xyz
 
-- name: UNLIAPPS
+- name: UNLIAPPS 1
   type: vmess
   server: 35.223.231.211
   port: 1443
@@ -31,7 +31,7 @@ proxies:
   ws-headers:
     Host: www.instagram.com
 
-- name: UNLIGAME
+- name: UNLIGAME 1
   type: vmess
   server: 35.223.231.211
   port: 1443
@@ -47,7 +47,7 @@ proxies:
   ws-headers:
     Host: www.pubgmobile.com
 
-- name: CONFERENCE
+- name: CONFERENCE 1
   type: vmess
   server: 35.223.231.211
   port: 1443
@@ -63,7 +63,7 @@ proxies:
   ws-headers:
     Host: teams.microsoft.com
 
-- name: TIKTOK
+- name: TIKTOK 1
   type: vmess
   server: 35.223.231.211
   port: 1443
@@ -79,7 +79,7 @@ proxies:
   ws-headers:
     Host: p16-va-default.akamaized.net
 
-- name: CHAT
+- name: CHAT 1
   type: vmess
   server: 35.223.231.211
   port: 1443
