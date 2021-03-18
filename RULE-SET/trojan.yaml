@@ -10,7 +10,6 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
-
 - name: UNLIGAME 1
   type: trojan
   server: id2-trojan.bonds.id
@@ -22,7 +21,6 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
-
 - name: CONFERENCE 1
   type: trojan
   server: id2-trojan.bonds.id
@@ -34,7 +32,6 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
-
 - name: TIKTOK 1
   type: trojan
   server: id2-trojan.bonds.id
@@ -46,7 +43,6 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
-
 - name: CHAT 1
   type: trojan
   server: id2-trojan.bonds.id
