@@ -54,7 +54,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: teams.microsoft.com
+  servername: meetings.googleapis.com
   network: ws
   ws-path: /d4181fdf03c4c/
   ws-headers:
@@ -117,7 +117,7 @@ proxies:
   port: 443
   password: 4961b1e0-8666-11eb-b749-1239d0255272
   udp: true
-  sni: teams.microsoft.com
+  sni: meetings.googleapis.com
   alpn:
     - h2
     - http/1.1
@@ -173,7 +173,7 @@ proxies:
   plugin: obfs
   plugin-opts:
     mode: tls
-    host: teams.microsoft.com
+    host: meetings.googleapis.com
 - name: TIKTOK 3
   type: ss
   server: 139.59.112.120
@@ -222,7 +222,7 @@ proxies:
   password: mbahhanif
   obfs: tls1.2_ticket_auth
   protocol: auth_sha1_v4
-  obfs-param: teams.microsoft.com
+  obfs-param: meetings.googleapis.com
   udp: true
 - name: TIKTOK 4
   type: ssr
