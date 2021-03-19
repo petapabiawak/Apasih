@@ -27,7 +27,7 @@ proxies:
   port: 443
   password: 4961b1e0-8666-11eb-b749-1239d0255272
   udp: true
-  sni: teams.microsoft.com
+  sni: meetings.googleapis.com
   alpn:
     - h2
     - http/1.1
