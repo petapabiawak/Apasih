@@ -28,7 +28,7 @@ proxies:
   plugin: obfs
   plugin-opts:
     mode: tls
-    host: teams.microsoft.com
+    host: meetings.googleapis.com
 - name: TIKTOK 3
   type: ss
   server: 139.59.112.120
