@@ -27,7 +27,7 @@ proxies:
   password: mbahhanif
   obfs: tls1.2_ticket_auth
   protocol: auth_sha1_v4
-  obfs-param: teams.microsoft.com
+  obfs-param: meetings.googleapis.com
   udp: true
 - name: TIKTOK 4
   type: ssr
