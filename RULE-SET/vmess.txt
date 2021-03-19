@@ -54,7 +54,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: teams.microsoft.com
+  servername: meetings.googleapis.com
   network: ws
   ws-path: /d4181fdf03c4c/
   ws-headers:
