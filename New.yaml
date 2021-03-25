@@ -15,23 +15,23 @@ proxies:
   - {name: Line 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: line.me, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: line.me}}
   - {name: Instagram 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.instagram.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.instagram.com}}
   - {name: Youtube 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.googlevideo.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.googlevideo.com}}
-  - {name: Whatsapp 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: web.whatsapp.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: web.whatsapp.com}}
+  - {name: Whatsapp 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: v.whatsapp.net, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: web.whatsapp.com}}
   - {name: Joox 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.joox.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.joox.com}}
-  - {name: Unligame 2, server: 103.55.37.83, port: 35554, type: trojan, password: XLTMU4C0Vg, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
-  - {name: Conference 2, server: 103.55.37.83, port: 35554, type: trojan, password: XLTMU4C0Vg, udp: true, sni: meetings.googleapis.com, alpn: , skip-cert-verify: true}
-  - {name: Line 2, server: 103.55.37.83, port: 35554, type: trojan, password: XLTMU4C0Vg, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
-  - {name: Tiktok 2, server: 103.55.37.83, port: 35554, type: trojan, password: XLTMU4C0Vg, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
-  - {name: Instagram 2, server: 103.55.37.83, port: 35554, type: trojan, password: XLTMU4C0Vg, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
-  - {name: Youtube 2, server: 103.55.37.83, port: 35554, type: trojan, password: XLTMU4C0Vg, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
-  - {name: Whatsapp 2, server: 103.55.37.83, port: 35554, type: trojan, password: XLTMU4C0Vg, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
-  - {name: Joox 2, server: 103.55.37.83, port: 35554, type: trojan, password: XLTMU4C0Vg, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
+  - {name: Unligame 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: afb09f80-8db8-11eb-a512-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
+  - {name: Conference 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: afb09f80-8db8-11eb-a512-1239d0255272, udp: true, sni: meetings.googleapis.com, alpn: , skip-cert-verify: true}
+  - {name: Line 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: afb09f80-8db8-11eb-a512-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
+  - {name: Tiktok 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: afb09f80-8db8-11eb-a512-1239d0255272, udp: true, sni: p16-va-default.akamaized.net, alpn: , skip-cert-verify: true}
+  - {name: Instagram 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: afb09f80-8db8-11eb-a512-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
+  - {name: Youtube 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: afb09f80-8db8-11eb-a512-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
+  - {name: Whatsapp 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: afb09f80-8db8-11eb-a512-1239d0255272, udp: true, sni: v.whatsapp.net, alpn: , skip-cert-verify: true}
+  - {name: Joox 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: afb09f80-8db8-11eb-a512-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
   - {name: Unligame 3, server: sg4-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: 2AgHUqvGk, plugin: obfs, plugin-opts: {mode: tls, host: www.pubgmobile.com}}
   - {name: Conference 3, server: sg4-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: 2AgHUqvGk, plugin: obfs, plugin-opts: {mode: tls, host: meetings.googleapis.com}}
   - {name: Line 3, server: sg4-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: 2AgHUqvGk, plugin: obfs, plugin-opts: {mode: tls, host: line.me}}
   - {name: Tiktok 3, server: sg4-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: 2AgHUqvGk, plugin: obfs, plugin-opts: {mode: tls, host: p16-va-default.akamaized.net}}
   - {name: Instagram 3, server: sg4-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: 2AgHUqvGk, plugin: obfs, plugin-opts: {mode: tls, host: www.instagram.com}}
   - {name: Youtube 3, server: sg4-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: 2AgHUqvGk, plugin: obfs, plugin-opts: {mode: tls, host: www.googlevideo.com}}
-  - {name: Whatsapp 3, server: sg4-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: 2AgHUqvGk, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
+  - {name: Whatsapp 3, server: sg4-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: 2AgHUqvGk, plugin: obfs, plugin-opts: {mode: tls, host: v.whatsapp.net}}
   - {name: Joox 3, server: sg4-socks.jagoanssh.com, port: 1443, type: ss, cipher: aes-256-cfb, password: 2AgHUqvGk, plugin: obfs, plugin-opts: {mode: tls, host: www.joox.com}}
   - {name: Unligame 4, server: sg4-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: 2AgHUqvGk, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.pubgmobile.com, udp: true}
   - {name: Conference 4, server: sg4-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: 2AgHUqvGk, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: meetings.googleapis.com, udp: true}
@@ -39,7 +39,7 @@ proxies:
   - {name: Tiktok 4, server: sg4-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: 2AgHUqvGk, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: p16-va-default.akamaized.net, udp: true}
   - {name: Instagram 4, server: sg4-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: 2AgHUqvGk, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.instagram.com, udp: true}
   - {name: Youtube 4, server: sg4-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: 2AgHUqvGk, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.googlevideo.com, udp: true}
-  - {name: Whatsapp 4, server: sg4-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: 2AgHUqvGk, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: web.whatsapp.com, udp: true}
+  - {name: Whatsapp 4, server: sg4-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: 2AgHUqvGk, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: v.whatsapp.net, udp: true}
   - {name: Joox 4, server: sg4-socks.jagoanssh.com, port: 8388, type: ssr, cipher: aes-256-cfb, password: 2AgHUqvGk, protocol: auth_chain_a, obfs: tls1.2_ticket_auth, obfs-param: www.joox.com, udp: true}
   - {name: Indosat Opok, server: covid19.go.id, port: 80, type: vmess, uuid: f607bfe0-3bc4-4cd8-a1f4-2965ea1f23c0, alterId: 64, cipher: auto, tls: , network: ws, ws-path: /okta, ws-headers: {Host: edu-01.vipconfig.cf}}
 
