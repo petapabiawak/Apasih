@@ -6,9 +6,9 @@ log-level: info
 external-controller: 127.0.0.1:9090
 
 proxies:
-  - {name: Edukasi 1, server: office.carepros.ca, port: 80, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: , network: ws, ws-path: /2c994e3b/, ws-headers: {Host: vmess.bplfn.gescripter.xyz}}
-  - {name: Edukasi 2, server: www.udemy.com, port: 80, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: , network: ws, ws-path: /2c994e3b/, ws-headers: {Host: vmess.bplfn.gescripter.xyz}}
-  - {name: Edukasi 3, server: bimbel.ruangguru.com, port: 80, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: , network: ws, ws-path: /2c994e3b/, ws-headers: {Host: vmess.bplfn.gescripter.xyz}}
+  - {name: Edukasi 1, server: office.carepros.ca, port: 80, type: vmess, uuid: f607bfe0-3bc4-4cd8-a1f4-2965ea1f23c0, alterId: 64, cipher: auto, tls: , network: ws, ws-path: /okta, ws-headers: {Host: edu-01.vipconfig.cf}}
+  - {name: Edukasi 2, server: www.udemy.com, port: 80, type: vmess, uuid: f607bfe0-3bc4-4cd8-a1f4-2965ea1f23c0, alterId: 64, cipher: auto, tls: , network: ws, ws-path: /okta, ws-headers: {Host: edu-01.vipconfig.cf}}
+  - {name: Edukasi 3, server: bimbel.ruangguru.com, port: 80, type: vmess, uuid: f607bfe0-3bc4-4cd8-a1f4-2965ea1f23c0, alterId: 64, cipher: auto, tls: , network: ws, ws-path: /okta, ws-headers: {Host: edu-01.vipconfig.cf}}
   - {name: Unligame 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.pubgmobile.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: www.pubgmobile.com}}
   - {name: Conference 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: meetings.googleapis.com, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: meetings.googleapis.com}}
   - {name: Tiktok 1, server: 139.59.112.120, port: 1443, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: p16-va-default.akamaized.net, network: ws, ws-path: /2c994e3b/, ws-headers: {Host: p16-va-default.akamaized.net}}
@@ -25,23 +25,23 @@ proxies:
   - {name: Youtube 2, server: 139.59.112.120, port: 2443, type: trojan, password: mbahhanif, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: Whatsapp 2, server: 139.59.112.120, port: 2443, type: trojan, password: mbahhanif, udp: true, sni: web.whatsapp.com, alpn: , skip-cert-verify: true}
   - {name: Joox 2, server: 139.59.112.120, port: 2443, type: trojan, password: mbahhanif, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
-  - {name: Unligame 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.pubgmobile.com}}
-  - {name: Conference 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: meetings.googleapis.com}}
-  - {name: Line 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: line.me}}
-  - {name: Tiktok 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: p16-va-default.akamaized.net}}
-  - {name: Instagram 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.instagram.com}}
-  - {name: Youtube 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.googlevideo.com}}
-  - {name: Whatsapp 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
-  - {name: Joox 3, server: 139.59.112.120, port: 994, type: ss, cipher: chacha20-ietf-poly1305, password: mbahhanif, plugin: obfs, plugin-opts: {mode: tls, host: www.joox.com}}
-  - {name: Unligame 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: www.pubgmobile.com, udp: true}
-  - {name: Conference 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: meetings.googleapis.com, udp: true}
-  - {name: Line 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: line.me, udp: true}
-  - {name: Tiktok 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: p16-va-default.akamaized.net, udp: true}
-  - {name: Instagram 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: www.instagram.com, udp: true}
-  - {name: Youtube 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: www.googlevideo.com, udp: true}
-  - {name: Whatsapp 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: web.whatsapp.com, udp: true}
-  - {name: Joox 4, server: 139.59.112.120, port: 1002, type: ssr, cipher: aes-256-cfb, password: mbahhanif, protocol: auth_sha1_v4, obfs: tls1.2_ticket_auth, obfs-param: www.joox.com, udp: true}
-  - {name: Indosat Opok, server: covid19.go.id, port: 80, type: vmess, uuid: 8d037210-9487-4df1-97c4-d9bd8e312545, alterId: 0, cipher: auto, tls: , network: ws, ws-path: /2c994e3b/, ws-headers: {Host: vmess.bplfn.gescripter.xyz}}
+  - {name: Unligame 3, server: 103.157.116.25, port: 816, type: ss, cipher: aes-256-cfb, password: sampekoid, plugin: obfs, plugin-opts: {mode: tls, host: www.pubgmobile.com}}
+  - {name: Conference 3, server: 103.157.116.25, port: 816, type: ss, cipher: aes-256-cfb, password: sampekoid, plugin: obfs, plugin-opts: {mode: tls, host: meetings.googleapis.com}}
+  - {name: Line 3, server: 103.157.116.25, port: 816, type: ss, cipher: aes-256-cfb, password: sampekoid, plugin: obfs, plugin-opts: {mode: tls, host: line.me}}
+  - {name: Tiktok 3, server: 103.157.116.25, port: 816, type: ss, cipher: aes-256-cfb, password: sampekoid, plugin: obfs, plugin-opts: {mode: tls, host: p16-va-default.akamaized.net}}
+  - {name: Instagram 3, server: 103.157.116.25, port: 816, type: ss, cipher: aes-256-cfb, password: sampekoid, plugin: obfs, plugin-opts: {mode: tls, host: www.instagram.com}}
+  - {name: Youtube 3, server: 103.157.116.25, port: 816, type: ss, cipher: aes-256-cfb, password: sampekoid, plugin: obfs, plugin-opts: {mode: tls, host: www.googlevideo.com}}
+  - {name: Whatsapp 3, server: 103.157.116.25, port: 816, type: ss, cipher: aes-256-cfb, password: sampekoid, plugin: obfs, plugin-opts: {mode: tls, host: web.whatsapp.com}}
+  - {name: Joox 3, server: 103.157.116.25, port: 816, type: ss, cipher: aes-256-cfb, password: sampekoid, plugin: obfs, plugin-opts: {mode: tls, host: www.joox.com}}
+  - {name: Unligame 4, server: 103.157.116.25, port: 1446, type: ssr, cipher: aes-256-cfb, password: sampekoid, protocol: origin, obfs: tls1.2_ticket_auth_compatible, obfs-param: www.pubgmobile.com, udp: true}
+  - {name: Conference 4, server: 103.157.116.25, port: 1446, type: ssr, cipher: aes-256-cfb, password: sampekoid, protocol: origin, obfs: tls1.2_ticket_auth_compatible, obfs-param: meetings.googleapis.com, udp: true}
+  - {name: Line 4, server: 103.157.116.25, port: 1446, type: ssr, cipher: aes-256-cfb, password: sampekoid, protocol: origin, obfs: tls1.2_ticket_auth_compatible, obfs-param: line.me, udp: true}
+  - {name: Tiktok 4, server: 103.157.116.25, port: 1446, type: ssr, cipher: aes-256-cfb, password: sampekoid, protocol: origin, obfs: tls1.2_ticket_auth_compatible, obfs-param: p16-va-default.akamaized.net, udp: true}
+  - {name: Instagram 4, server: 103.157.116.25, port: 1446, type: ssr, cipher: aes-256-cfb, password: sampekoid, protocol: origin, obfs: tls1.2_ticket_auth_compatible, obfs-param: www.instagram.com, udp: true}
+  - {name: Youtube 4, server: 103.157.116.25, port: 1446, type: ssr, cipher: aes-256-cfb, password: sampekoid, protocol: origin, obfs: tls1.2_ticket_auth_compatible, obfs-param: www.googlevideo.com, udp: true}
+  - {name: Whatsapp 4, server: 103.157.116.25, port: 1446, type: ssr, cipher: aes-256-cfb, password: sampekoid, protocol: origin, obfs: tls1.2_ticket_auth_compatible, obfs-param: web.whatsapp.com, udp: true}
+  - {name: Joox 4, server: 103.157.116.25, port: 1446, type: ssr, cipher: aes-256-cfb, password: sampekoid, protocol: origin, obfs: tls1.2_ticket_auth_compatible, obfs-param: www.joox.com, udp: true}
+  - {name: Indosat Opok, server: covid19.go.id, port: 80, type: vmess, uuid: f607bfe0-3bc4-4cd8-a1f4-2965ea1f23c0, alterId: 64, cipher: auto, tls: , network: ws, ws-path: /okta, ws-headers: {Host: edu-01.vipconfig.cf}}
 
 proxy-groups:
   - name: PROXY
