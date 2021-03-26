@@ -54,7 +54,7 @@ proxy-groups:
       - SS
       - SSR
   - name: VMESS
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
@@ -71,7 +71,7 @@ proxy-groups:
       - Joox 1
       - Indosat Opok
   - name: TROJAN
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
@@ -84,7 +84,7 @@ proxy-groups:
       - Whatsapp 2
       - Joox 2
   - name: SS
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
@@ -97,7 +97,7 @@ proxy-groups:
       - Whatsapp 3
       - Joox 3
   - name: SSR
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
