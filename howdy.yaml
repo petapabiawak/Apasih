@@ -32,7 +32,9 @@ proxy-groups:
       - SINGAPURA
 
   - name: INDONESIA
-    type: select
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     proxies:
       - Unligame 1
       - Conference 1
@@ -44,7 +46,9 @@ proxy-groups:
       - Joox 1
 
   - name: SINGAPURA
-    type: select
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     proxies:
       - Unligame 2
       - Conference 2
