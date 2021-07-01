@@ -14,14 +14,14 @@ proxies:
   - {name: Youtube 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: dd7bf370-d9ea-11eb-b663-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
   - {name: Whatsapp 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: dd7bf370-d9ea-11eb-b663-1239d0255272, udp: true, sni: v.whatsapp.net, alpn: , skip-cert-verify: true}
   - {name: Joox 1, server: id2-trojan.bonds.id, port: 443, type: trojan, password: dd7bf370-d9ea-11eb-b663-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
-  - {name: Unligame 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: 0cc41a20-d1e3-11eb-951c-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
-  - {name: Conference 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: 0cc41a20-d1e3-11eb-951c-1239d0255272, udp: true, sni: turn.teams.microsoft.com, alpn: , skip-cert-verify: true}
-  - {name: Line 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: 0cc41a20-d1e3-11eb-951c-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
-  - {name: Tiktok 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: 0cc41a20-d1e3-11eb-951c-1239d0255272, udp: true, sni: s-16.tiktokcdn.com, alpn: , skip-cert-verify: true}
-  - {name: Instagram 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: 0cc41a20-d1e3-11eb-951c-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
-  - {name: Youtube 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: 0cc41a20-d1e3-11eb-951c-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
-  - {name: Whatsapp 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: 0cc41a20-d1e3-11eb-951c-1239d0255272, udp: true, sni: v.whatsapp.net, alpn: , skip-cert-verify: true}
-  - {name: Joox 2, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: 0cc41a20-d1e3-11eb-951c-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
+  - {name: Unligame 2, server: sg5-trojan.bonds.id, port: 443, type: trojan, password: eee2a680-da3a-11eb-9094-1239d0255272, udp: true, sni: www.pubgmobile.com, alpn: , skip-cert-verify: true}
+  - {name: Conference 2, server: sg5-trojan.bonds.id, port: 443, type: trojan, password: eee2a680-da3a-11eb-9094-1239d0255272, udp: true, sni: turn.teams.microsoft.com, alpn: , skip-cert-verify: true}
+  - {name: Line 2, server: sg5-trojan.bonds.id, port: 443, type: trojan, password: eee2a680-da3a-11eb-9094-1239d0255272, udp: true, sni: line.me, alpn: , skip-cert-verify: true}
+  - {name: Tiktok 2, server: sg5-trojan.bonds.id, port: 443, type: trojan, password: eee2a680-da3a-11eb-9094-1239d0255272, udp: true, sni: s-16.tiktokcdn.com, alpn: , skip-cert-verify: true}
+  - {name: Instagram 2, server: sg5-trojan.bonds.id, port: 443, type: trojan, password: eee2a680-da3a-11eb-9094-1239d0255272, udp: true, sni: www.instagram.com, alpn: , skip-cert-verify: true}
+  - {name: Youtube 2, server: sg5-trojan.bonds.id, port: 443, type: trojan, password: eee2a680-da3a-11eb-9094-1239d0255272, udp: true, sni: www.googlevideo.com, alpn: , skip-cert-verify: true}
+  - {name: Whatsapp 2, server: sg5-trojan.bonds.id, port: 443, type: trojan, password: eee2a680-da3a-11eb-9094-1239d0255272, udp: true, sni: v.whatsapp.net, alpn: , skip-cert-verify: true}
+  - {name: Joox 2, server: sg5-trojan.bonds.id, port: 443, type: trojan, password: eee2a680-da3a-11eb-9094-1239d0255272, udp: true, sni: www.joox.com, alpn: , skip-cert-verify: true}
 
 proxy-groups:
   - name: PROXY
@@ -32,7 +32,7 @@ proxy-groups:
       - SINGAPURA
 
   - name: INDONESIA
-    type: select
+    type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
@@ -46,7 +46,7 @@ proxy-groups:
       - Joox 1
 
   - name: SINGAPURA
-    type: select
+    type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
