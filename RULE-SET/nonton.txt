@@ -1,0 +1,26 @@
+payload:
+  # > DISNEY+
+  - DOMAIN-KEYWORD,hotstar
+  - DOMAIN-SUFFIX,hotstar.com
+  - DOMAIN-SUFFIX,hotstarext.com
+  - DOMAIN-SUFFIX,disney-plus.net
+  - DOMAIN-SUFFIX,disneyplus.com
+  - DOMAIN-SUFFIX,dssott.com
+  - DOMAIN,cdn.registerdisney.go.com
+  - DOMAIN,global.edge.bamgrid.com
+  # > VIDIO
+  - IP-CIDR,114.125.64.0/19
+  - DOMAIN-SUFFIX,vidio.com
+  - DOMAIN,api.vidio.com
+  - DOMAIN,www.vidio.com
+  - DOMAIN,static-playback-vidio-com.akamaized.net
+  - DOMAIN,token-media-vidio-com.akamaized.net
+  - DOMAIN,geo-id-media-vidio-com.akamaized.net
+  # > VIU
+  - DOMAIN-KEYWORD,viu
+  - DOMAIN-SUFFIX,viu.com
+  - DOMAIN-SUFFIX,viu.tv
+  - DOMAIN,api.viu.now.com
+  - DOMAIN,d1k2us671qcoau.cloudfront.net
+  - DOMAIN,d2anahhhmp1ffz.cloudfront.net
+  - DOMAIN,dfp6rglgjqszk.cloudfront.net
