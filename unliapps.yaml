@@ -113,7 +113,25 @@ proxy-groups:
     proxies:
       - DIRECT
       - PROXY
-
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
 rules:
   # > MARKET PLACE
   - DOMAIN-KEYWORD,ovo,MARKET
@@ -370,23 +388,6 @@ rules:
   - DOMAIN-SUFFIX,twitpic.com,BYPASS
   - DOMAIN-SUFFIX,vine.co,BYPASS
   - DOMAIN-KEYWORD,twitter,BYPASS
-  # > TELEGRAM
-  - DOMAIN-SUFFIX,telegra.ph,BYPASS
-  - DOMAIN-SUFFIX,telegram.org,BYPASS
-  - IP-CIDR,91.108.4.0/22,BYPASS,no-resolve
-  - IP-CIDR,91.108.8.0/22,BYPASS,no-resolve
-  - IP-CIDR,91.108.12.0/22,BYPASS,no-resolve
-  - IP-CIDR,91.108.16.0/22,BYPASS,no-resolve
-  - IP-CIDR,91.108.56.0/22,BYPASS,no-resolve
-  - IP-CIDR,149.154.160.0/20,BYPASS,no-resolve
-  - IP-CIDR,2001:b28:f23d::/48,BYPASS,no-resolve
-  - IP-CIDR,2001:b28:f23f::/48,BYPASS,no-resolve
-  - IP-CIDR,2001:67c:4e8::/48,BYPASS,no-resolve
-  - DOMAIN-SUFFIX,t.me,BYPASS
-  - DOMAIN-SUFFIX,tdesktop.com,BYPASS
-  - DOMAIN-SUFFIX,telegra.ph,BYPASS
-  - DOMAIN-SUFFIX,telegram.me,BYPASS
-  - DOMAIN-SUFFIX,telegram.org,BYPASS
   # > YOUTUBE
   - DOMAIN-KEYWORD,youtube,BYPASS
   - DOMAIN-SUFFIX,youtube.com,BYPASS
@@ -395,6 +396,7 @@ rules:
   - DOMAIN-SUFFIX,googlevideo.com,BYPASS
   - DOMAIN-SUFFIX,ytimg.com,BYPASS
   - DOMAIN,youtubei.googleapis.com,BYPASS
+  - DOMAIN-SUFFIX,yt3.ggpht.com,BYPASS
   # > NIMOTV
   - DOMAIN-KEYWORD,nimo,BYPASS
   - DOMAIN-SUFFIX,nimo.tv,BYPASS
@@ -439,12 +441,6 @@ rules:
   - DOMAIN-SUFFIX,akamaized.net,SOSMED
   - DOMAIN-SUFFIX,akamaihd.com,SOSMED
   - DOMAIN-SUFFIX,akamaihd.net,SOSMED
-  # > DOWNLOAD
-  - DOMAIN-SUFFIX,pling.com,BYPASS
-  - DOMAIN-SUFFIX,cdnrobot.xyz,BYPASS
-  - DOMAIN-SUFFIX,mediafire.com,BYPASS
-  - DOMAIN-SUFFIX,sourceforge.net,BYPASS
-  - DOMAIN-SUFFIX,zippyshare.com,BYPASS
   # > GOOGLE
   - IP-CIDR,35.190.247.0/24,GOOGLE
   - IP-CIDR,64.233.160.0/19,GOOGLE
@@ -473,52 +469,59 @@ rules:
   - DOMAIN-SUFFIX,gvt2.com,GOOGLE
   - DOMAIN-SUFFIX,ggpht.com,GOOGLE
   - DOMAIN-SUFFIX,gmodules.com,GOOGLE
-  # > IKLAN
-  - DOMAIN-SUFFIX,ad.com,REJECT
-  - DOMAIN-KEYWORD,adservice,REJECT
-  - DOMAIN-KEYWORD,analytics,REJECT
-  - DOMAIN-KEYWORD,analysis,REJECT
-  - DOMAIN-SUFFIX,3lift.com,REJECT
-  - DOMAIN-SUFFIX,doubleclick.net,REJECT
-  - DOMAIN-SUFFIX,googleadservices.com,REJECT
-  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
-  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
-  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
-  - DOMAIN-SUFFIX,googletagservices.com,REJECT
-  - DOMAIN-SUFFIX,google-analytics.com,REJECT
-  - DOMAIN-SUFFIX,ad.xiaomi.com,REJECT
-  - DOMAIN-SUFFIX,admob.xiaomi.com,REJECT
-  - DOMAIN-SUFFIX,ad.intl.xiaomi.com,REJECT
-  - DOMAIN-SUFFIX,data.mistat.xiaomi.com,REJECT
-  - DOMAIN-SUFFIX,tracking.miui.com,REJECT
-  - DOMAIN,adv.sec.miui.com,REJECT
-  - DOMAIN,adv.sec.intl.miui.com,REJECT
-  - DOMAIN,o2o.api.xiaomi.com,REJECT
-  # > LOCAL AREA NETWORK
-  - DOMAIN-KEYWORD,announce,DIRECT,no-resolve
-  - DOMAIN-KEYWORD,torrent,DIRECT,no-resolve
-  - DOMAIN-KEYWORD,tracker,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,smtp,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,local,DIRECT,no-resolve
-  - IP-CIDR,0.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,192.0.0.0/24,DIRECT,no-resolve
-  - IP-CIDR,192.0.2.0/24,DIRECT,no-resolve
-  - IP-CIDR,192.88.99.0/24,DIRECT,no-resolve
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,198.18.0.0/15,DIRECT,no-resolve
-  - IP-CIDR,198.51.100.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.0.113.0/24,DIRECT,no-resolve
-  - IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
-  - IP-CIDR,240.0.0.0/4,DIRECT,no-resolve
-  - IP-CIDR,255.255.255.255/32,DIRECT,no-resolve
-  - IP-CIDR6,::1/128,DIRECT,no-resolve
-  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
-  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
-  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
-  - MATCH,,PROXY,dns-failed
+  - DOMAIN-SUFFIX,265.com,GOOGLE
+  - DOMAIN-SUFFIX,2mdn.net,GOOGLE
+  - DOMAIN-SUFFIX,adservice.google.com,GOOGLE
+  - DOMAIN-SUFFIX,app-measurement.com,GOOGLE
+  - DOMAIN-SUFFIX,beacons.gcp.gvt2.com,GOOGLE
+  - DOMAIN-SUFFIX,beacons.gvt2.com,GOOGLE
+  - DOMAIN-SUFFIX,beacons2.gvt2.com,GOOGLE
+  - DOMAIN-SUFFIX,beacons3.gvt2.com,GOOGLE
+  - DOMAIN-SUFFIX,c.admob.com,GOOGLE
+  - DOMAIN-SUFFIX,c.android.clients.google.com,GOOGLE
+  - DOMAIN-SUFFIX,cache.pack.google.com,GOOGLE
+  - DOMAIN-SUFFIX,checkin.gstatic.com,GOOGLE
+  - DOMAIN-SUFFIX,clickserve.dartsearch.net,GOOGLE
+  - DOMAIN-SUFFIX,clientservices.googleapis.com,GOOGLE
+  - DOMAIN-SUFFIX,connectivitycheck.gstatic.com,GOOGLE
+  - DOMAIN-SUFFIX,corp.google.com,GOOGLE
+  - DOMAIN-SUFFIX,csi.gstatic.com,GOOGLE
+  - DOMAIN-SUFFIX,dl.google.com,GOOGLE
+  - DOMAIN-SUFFIX,dl.l.google.com,GOOGLE
+  - DOMAIN-SUFFIX,doubleclick.net,GOOGLE
+  - DOMAIN-SUFFIX,firebase-settings.crashlytics.com,GOOGLE
+  - DOMAIN-SUFFIX,fonts.googleapis.com,GOOGLE
+  - DOMAIN-SUFFIX,fonts.gstatic.com,GOOGLE
+  - DOMAIN-SUFFIX,g1.gstatic.com,GOOGLE
+  - DOMAIN-SUFFIX,g2.gstatic.com,GOOGLE
+  - DOMAIN-SUFFIX,google-analytics.com,GOOGLE
+  - DOMAIN-SUFFIX,googleadservices.com,GOOGLE
+  - DOMAIN-SUFFIX,googleanalytics.com,GOOGLE
+  - DOMAIN-SUFFIX,googlesyndication.com,GOOGLE
+  - DOMAIN-SUFFIX,googletagmanager.com,GOOGLE
+  - DOMAIN-SUFFIX,googletagservices.com,GOOGLE
+  - DOMAIN-SUFFIX,gstaticadssl.l.google.com,GOOGLE
+  - DOMAIN-SUFFIX,gtm.oasisfeng.com,GOOGLE
+  - DOMAIN-SUFFIX,imasdk.googleapis.com,GOOGLE
+  - DOMAIN-SUFFIX,pagead-googlehosted.l.google.com,GOOGLE
+  - DOMAIN-SUFFIX,pki-goog.l.google.com,GOOGLE
+  - DOMAIN-SUFFIX,recaptcha.net,GOOGLE
+  - DOMAIN-SUFFIX,redirector.gvt1.com,GOOGLE
+  - DOMAIN-SUFFIX,regioninfo-pa.googleapis.com,GOOGLE
+  - DOMAIN-SUFFIX,safebrowsing-cache.google.com,GOOGLE
+  - DOMAIN-SUFFIX,safebrowsing.googleapis.com,GOOGLE
+  - DOMAIN-SUFFIX,ssl-google-analytics.l.google.com,GOOGLE
+  - DOMAIN-SUFFIX,ssl.gstatic.com,GOOGLE
+  - DOMAIN-SUFFIX,toolbarqueries.google.com,GOOGLE
+  - DOMAIN-SUFFIX,tools.google.com,GOOGLE
+  - DOMAIN-SUFFIX,tools.l.google.com,GOOGLE
+  - DOMAIN-SUFFIX,translate.googleapis.com,GOOGLE
+  - DOMAIN-SUFFIX,translation.googleapis.com,GOOGLE
+  - DOMAIN-SUFFIX,update.googleapis.com,GOOGLE
+  - DOMAIN-SUFFIX,www-google-analytics.l.google.com,GOOGLE
+  - DOMAIN-SUFFIX,www-googletagmanager.l.google.com,GOOGLE
+  - DOMAIN-SUFFIX,www.gstatic.com,GOOGLE
+  - RULE-SET,reject,REJECT
+  - RULE-SET,telegramcidr,BYPASS
+  - RULE-SET,lancidr,DIRECT
+  - MATCH,PROXY
