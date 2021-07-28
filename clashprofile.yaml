@@ -88,5 +88,4 @@ rules:
   - DOMAIN-SUFFIX,doubleclick.net,REJECT
   - DOMAIN-SUFFIX,googleadservices.com,REJECT
   - DOMAIN-SUFFIX,google-analytics.com,REJECT
-  - MATCH,PROXY
-  
+  - MATCH,Proxy
