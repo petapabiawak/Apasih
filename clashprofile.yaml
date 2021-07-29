@@ -29,13 +29,13 @@ proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - Otomatis
       - Indonesia
       - Singapura
       - Opok Telkomsel
       - Edukasi
+      - Otomatis
   - name: Indonesia
-    type: select
+    type: load-balance
     proxies:
       - Unligame 1
       - Conference 1
@@ -46,8 +46,11 @@ proxy-groups:
       - Youtube 1
       - Whatsapp 1
       - Joox 1
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
   - name: Singapura
-    type: select
+    type: load-balance
     proxies:
       - Unligame 2
       - Conference 2
@@ -58,10 +61,11 @@ proxy-groups:
       - Youtube 2
       - Whatsapp 2
       - Joox 2
-  - name: Otomatis
-    type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
+    strategy: consistent-hashing
+  - name: Otomatis
+    type: url-test
     proxies:
       - Unligame 1
       - Unligame 2
@@ -83,11 +87,15 @@ proxy-groups:
       - Joox 2
       - Opok Telkomsel
       - Edukasi
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
 rules:
-  - DOMAIN-KEYWORD,ads,REJECT
-  - DOMAIN-KEYWORD,adservice,REJECT
-  - DOMAIN-KEYWORD,analytics,REJECT
-  - DOMAIN-SUFFIX,doubleclick.net,REJECT
-  - DOMAIN-SUFFIX,googleadservices.com,REJECT
-  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - RULE-SET,reject,REJECT
   - MATCH,Proxy
