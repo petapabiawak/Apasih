@@ -1,0 +1,52 @@
+proxies:
+- name: "Vless WS"
+  type: vless
+  server: server
+  port: 80
+  uuid: xxxxxxxxxxxxx
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: bing.com
+  network: ws
+  ws-path: "/path"
+  ws-headers:
+    Host: bing.com
+
+- name: "Vless TCP"
+  server: server
+  port: 443
+  type: vless
+  uuid: xxxxxxxxxxxxx
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  network: tcp
+  servername: bing.com
+
+- name: "Vless GRPC"
+  server: server
+  port: 443
+  type: vless
+  uuid: xxxxxxxxxxxxx
+  cipher: auto
+  tls: true
+  servername: bing.com
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: "example"
+
+- name: "Vless XTLS-Direct"
+  server: server
+  port: 443
+  type: vless
+  uuid: xxxxxxxxxxxxx
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: bing.com
+  network: tcp
+  flow: xtls-rprx-direct

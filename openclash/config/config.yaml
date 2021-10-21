@@ -1,0 +1,237 @@
+---
+# Use TUN Mode!
+# If you want to use Vless, replace the core with Experimental but don't use TUN Mode and delete from line 54 to 59 "tun:" or marked with a hash '#'
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: '123456'
+bind-address: "*"
+external-ui: "/usr/share/openclash/dashboard"
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 127.0.0.1:7874
+  nameserver:
+  - 8.8.8.8
+  - 8.4.4.4
+  fallback:
+  - https://dns.google/dns-query
+  - https://cloudflare-dns.com/dns-query
+  - tls://dns.google:853
+  - https://1.1.1.1/dns-query
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    - 0.0.0.0/8
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 169.254.0.0/16
+    - 172.16.0.0/12
+    - 192.0.0.0/24
+    - 192.0.2.0/24
+    - 192.88.99.0/24
+    - 192.168.0.0/16
+    - 198.18.0.0/15
+    - 198.51.100.0/24
+    - 203.0.113.0/24
+    - 224.0.0.0/4
+    - 240.0.0.0/4
+    - 255.255.255.255/32
+    domain:
+    - "+.google.com"
+    - "+.facebook.com"
+    - "+.youtube.com"
+    - "+.githubusercontent.com"
+ipv6: false
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+  - tcp://8.8.8.8:53
+  - tcp://8.8.4.4:53
+proxies:
+proxy-providers:
+  Ss_Ssr:
+    type: file
+    path: "/etc/openclash/proxy_provider/Ss_Ssr.yaml"
+    health-check:
+      enable: true
+      interval: 99
+      lazy: true
+      url: http://www.gstatic.com/generate_204
+  Trojan:
+    type: file
+    path: "/etc/openclash/proxy_provider/Trojan.yaml"
+    health-check:
+      enable: true
+      interval: 99
+      lazy: true
+      url: http://www.gstatic.com/generate_204
+#  Vless:
+#    type: file
+#    path: "/etc/openclash/proxy_provider/Vless.yaml"
+#    health-check:
+#      enable: true
+#      interval: 99
+#      lazy: true
+#      url: http://www.gstatic.com/generate_204
+  Vmess:
+    type: file
+    path: "/etc/openclash/proxy_provider/Vmess.yaml"
+    health-check:
+      enable: true
+      interval: 99
+      lazy: true
+      url: http://www.gstatic.com/generate_204
+proxy-groups:
+- name: PROXY
+  type: select
+  disable-udp: false
+  proxies:
+  - AUTO
+  use:
+  - Ss_Ssr
+  - Trojan
+  # - Vless
+  - Vmess
+- name: AUTO
+  type: url-test
+  disable-udp: false
+  use:
+  - Ss_Ssr
+  - Trojan
+  # - Vless
+  - Vmess
+  url: http://www.gstatic.com/generate_204
+  interval: '600'
+  tolerance: 100
+- name: CHAT
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - PROXY
+- name: TIKTOK
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - PROXY
+  - REJECT
+- name: MUSIC
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - PROXY
+- name: GAME
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - PROXY
+  - REJECT
+- name: FACEBOOK
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - PROXY
+- name: YOUTUBE
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - PROXY
+- name: DISNEY
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - PROXY
+- name: UDP
+  type: select
+  disable-udp: false
+  proxies:
+  - PROXY
+  use:
+  # - Vless
+  - Vmess
+rule-providers:
+  Chatting:
+    type: file
+    behavior: classical
+    path: "/etc/openclash/rule_provider/Chatting.yaml"
+  TikTok:
+    type: file
+    behavior: classical
+    path: "/etc/openclash/rule_provider/TikTok.yaml"
+  Music:
+    type: file
+    behavior: classical
+    path: "/etc/openclash/rule_provider/Music.yaml"
+  Gaming:
+    type: file
+    behavior: classical
+    path: "/etc/openclash/rule_provider/Gaming.yaml"
+  Facebook:
+    type: file
+    behavior: classical
+    path: "/etc/openclash/rule_provider/Facebook.yaml"
+  YouTube:
+    type: file
+    behavior: classical
+    path: "/etc/openclash/rule_provider/YouTube.yaml"
+  Disney:
+    type: file
+    behavior: classical
+    path: "/etc/openclash/rule_provider/Disney.yaml"
+  AdBlock:
+    type: file
+    behavior: classical
+    path: "/etc/openclash/rule_provider/StevenBlack.yaml"
+script:
+  shortcuts:
+    Umum: network == 'udp' and dst_port == 443
+    Whatsapp_udp: network == 'udp' and ((dst_port == 1900) or (dst_port == 3478) or (dst_port == 34784) or (dst_port == 40279) or (dst_port == 45395) or (dst_port == 50318) or (dst_port == 59234))
+    Whatsapp_tcp: network == 'tcp' and ((dst_port == 1900) or (dst_port == 4244) or (dst_port == 5222) or (dst_port == 5223) or (dst_port == 5228) or (dst_port == 5242) or (dst_port == 5288) or (dst_port == 5349) or (dst_port == 50318) or (dst_port == 59234))
+    Mobilelegends_udp: network == 'udp' and ((dst_port >= 4001 and dst_port <= 4009) or (dst_port >= 5000 and dst_port <= 5221) or (dst_port >= 5224 and dst_port <= 5241) or (dst_port >= 5243 and dst_port <= 5508) or (dst_port >= 5520 and dst_port <= 5529) or (dst_port >= 5551 and dst_port <= 5559) or (dst_port >= 5601 and dst_port <= 5700) or (dst_port >= 9000 and dst_port <= 90010) or (dst_port >= 30000 and dst_port <= 30300) or (dst_port == 2702) or (dst_port == 3702) or (dst_port == 5517) or (dst_port == 8001) or (dst_port == 9992) or (dst_port == 10003) or (dst_port == 30885))
+    Mobilelegends_tcp: network == 'tcp' and ((dst_port >= 5000 and dst_port <= 5221) or (dst_port >= 5224 and dst_port <= 5227) or (dst_port >= 5229 and dst_port <= 5241) or (dst_port >= 5243 and dst_port <= 5508) or (dst_port >= 5520 and dst_port <= 5529) or (dst_port >= 5551 and dst_port <= 5559) or (dst_port >= 5601 and dst_port <= 5700) or (dst_port >= 30000 and dst_port <= 30300) or (dst_port == 9001) or (dst_port == 9443) or (dst_port == 10003) or (dst_port == 30885))
+    Pubgmobile_udp: network == 'udp' and ((dst_port >= 7086 and dst_port <= 7995) or (dst_port >= 12070 and dst_port <= 12460) or (dst_port >= 20000 and dst_port <= 20002) or (dst_port >= 41182 and dst_port <= 41192) or (dst_port == 8011) or (dst_port == 8013) or (dst_port == 9030) or (dst_port == 9031) or (dst_port == 10013) or (dst_port == 10039) or (dst_port == 10096) or (dst_port == 10491) or (dst_port == 10612) or (dst_port == 11455) or (dst_port == 12235) or (dst_port == 13004) or (dst_port == 13748) or (dst_port == 13894) or (dst_port == 13972) or (dst_port == 15692) or (dst_port == 17000) or (dst_port == 17500))
+    Pubgmobile_tcp: network == 'tcp' and ((dst_port >= 20000 and dst_port <= 20002) or (dst_port == 7889) or (dst_port == 10012) or (dst_port == 10013) or (dst_port == 13004) or (dst_port == 14000) or (dst_port == 15692) or (dst_port == 17000) or (dst_port == 17500) or (dst_port == 18081) or (dst_port == 20371))
+# If there are other game ports, please add them yourself...
+rules:
+- SCRIPT,Umum,UDP
+- SCRIPT,Whatsapp_udp,CHAT
+- SCRIPT,Whatsapp_tcp,CHAT
+- SCRIPT,Mobilelegends_udp,GAME
+- SCRIPT,Mobilelegends_tcp,GAME
+- SCRIPT,Pubgmobile_udp,GAME
+- SCRIPT,Pubgmobile_tcp,GAME
+- RULE-SET,Chatting,CHAT
+- RULE-SET,TikTok,TIKTOK
+- RULE-SET,Music,MUSIC
+- RULE-SET,Gaming,GAME
+- RULE-SET,Facebook,FACEBOOK
+- RULE-SET,YouTube,YOUTUBE
+- RULE-SET,Disney,DISNEY
+- RULE-SET,AdBlock,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- IP-CIDR,fe80::/10,DIRECT
+- IP-CIDR,119.28.28.28/32,DIRECT
+- IP-CIDR,182.254.116.0/24,DIRECT
+- MATCH,PROXY

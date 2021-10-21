@@ -1,0 +1,43 @@
+payload:
+  # > PUBG
+  - DOMAIN-KEYWORD,pubgmobile
+  - DOMAIN-KEYWORD,pubg
+  - DOMAIN-SUFFIX,pubgmobile.com
+  - DOMAIN-SUFFIX,pubgmobile.net
+  - DOMAIN-SUFFIX,igamecj.com
+  - DOMAIN-SUFFIX,file-igamecj.akamaized.net
+  - DOMAIN-SUFFIX,tencent.com
+  - DOMAIN-SUFFIX,intl.cloud.tencent.com
+  - DOMAIN-SUFFIX,gjacky.com
+  - DOMAIN-SUFFIX,yuucdn.com
+  - DOMAIN-SUFFIX,game-mode.net
+  - DOMAIN,asia.csoversea.mbgame.anticheatexpert.com
+  - DOMAIN-SUFFIX,shenzhentencent.com
+  - DOMAIN-SUFFIX,anticheatexpert.com
+  - DOMAIN-SUFFIX,amsoveasea.com
+  - DOMAIN-SUFFIX,awsdns-55.co.uk
+  - DOMAIN-SUFFIX,awsdns-43.com
+  - DOMAIN-SUFFIX,awsdns-47.net
+  - DOMAIN-SUFFIX,awsdns-34.org
+  - DOMAIN-SUFFIX,tdatamaster.com
+  - DOMAIN-SUFFIX,gcloudcs.com
+  - DOMAIN-SUFFIX,gcloudsdk.com
+  - DOMAIN-SUFFIX,qcloud.com
+  - IP-CIDR,45.40.220.0/22
+  - IP-CIDR,150.109.124.0/23
+  - IP-CIDR,49.51.228.0/23
+  - IP-CIDR,170.106.102.0/24
+
+  # > MLBB
+  - DOMAIN-KEYWORD,mobilelegends
+  - DOMAIN-SUFFIX,mobilelegends.com
+  - DOMAIN-SUFFIX,mobile-legends.net
+  - DOMAIN-SUFFIX,youngjoygame.com
+  - DOMAIN-SUFFIX,ml.youngjoygame.com
+  - DOMAIN-SUFFIX,yuanzhanapp.com
+  - DOMAIN-SUFFIX,aihelp.net
+  - DOMAIN,pv.sohu.com
+  - DOMAIN,ml.CS30.NET
+  - DOMAIN,app.adjust.world
+  - DOMAIN,app.adjust.com
+  - DOMAIN,app.adjust.net.in

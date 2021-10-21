@@ -1,0 +1,54 @@
+proxies:
+- name: "SS"
+  type: ss
+  server: server
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: "password"
+  udp: true
+
+- name: "SS TLS"
+  type: ss
+  server: server
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: "password"
+  plugin: obfs
+  plugin-opts:
+    mode: tls
+    host: bing.com
+
+- name: "SS HTTP"
+  type: ss
+  server: server
+  port: 80
+  cipher: chacha20-ietf-poly1305
+  password: "password"
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: bing.com
+
+- name: "SSR TLS"
+  type: ssr
+  server: server
+  port: 443
+  cipher: aes-128-cfb
+  password: "password"
+  obfs: tls1.2_ticket_auth
+  protocol: auth_sha1_v4
+  obfs-param: bing.com
+  # protocol-param: "#"
+  udp: true
+
+- name: "SSR HTTP"
+  type: ssr
+  server: server
+  port: 80
+  cipher: aes-128-cfb
+  password: "password"
+  obfs: http_simple
+  protocol: auth_sha1_v4
+  obfs-param: bing.com
+  # protocol-param: "#"
+  # udp: true

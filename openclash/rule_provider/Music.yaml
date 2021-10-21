@@ -1,0 +1,14 @@
+payload:
+  - PROCESS-NAME,com.spotify.music
+  - DOMAIN-SUFFIX,pscdn.co
+  - DOMAIN-SUFFIX,scdn.co
+  - DOMAIN-SUFFIX,spotify.com
+  - DOMAIN-SUFFIX,spoti.fi
+  - DOMAIN-KEYWORD,spotify.com
+  - DOMAIN-KEYWORD,-spotify-com
+  - PROCESS-NAME,com.tencent.ibg.joox
+  - PROCESS-NAME,com.tencent.ibg.jooxtv
+  - DOMAIN-KEYWORD,jooxweb-api
+  - DOMAIN-KEYWORD,joox
+  - DOMAIN-SUFFIX,joox.com
+  - DOMAIN-SUFFIX,langitmusik.co.id

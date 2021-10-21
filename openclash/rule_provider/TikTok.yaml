@@ -1,0 +1,28 @@
+payload:
+  # > TikTok
+  - PROCESS-NAME,com.ss.android.ugc.trill
+  - PROCESS-NAME,com.zhiliaoapp.musically.go
+  - DOMAIN-KEYWORD,tiktok
+  - DOMAIN,abtest-va-tiktok.byteoversea.com
+  - DOMAIN,dm-maliva16.byteoversea.com
+  - DOMAIN,dm16-useast1a.byteoversea.com
+  - DOMAIN,xlog-va.byteoversea.com
+  - DOMAIN,vcs-sg.byteoversea.com
+  - DOMAIN,sgali3.l.byteoversea.net
+  - DOMAIN-SUFFIX,hypstarcdn.com
+  - DOMAIN,dm.bytedance.com
+  - DOMAIN-SUFFIX,ibytedtos.com
+  - DOMAIN,sf-tb-sg.ibytedtos.com
+  - DOMAIN-SUFFIX,ipstatp.com
+  - DOMAIN-SUFFIX,muscdn.com
+  - DOMAIN-SUFFIX,musical.ly
+  - DOMAIN-SUFFIX,musically.ly
+  - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,tiktok.org
+  - DOMAIN-SUFFIX,tik-tokapi.com
+  - DOMAIN-SUFFIX,tiktokcdn.com
+  - DOMAIN-SUFFIX,tiktokv.com
+  - DOMAIN-KEYWORD,-tiktokcdn-com
+  - DOMAIN-SUFFIX,tiktokcdn-a.akamaized.net
+  - DOMAIN-SUFFIX,tiktokcdn-com.akamaized.net
+  - DOMAIN-SUFFIX,-tiktokcdn-com.akamaized.net

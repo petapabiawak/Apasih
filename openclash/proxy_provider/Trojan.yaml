@@ -1,0 +1,37 @@
+proxies:
+- name: "Trojan GFW"
+  type: trojan
+  server: server
+  port: 443
+  password: password
+  udp: true
+  sni: example.com
+  alpn:
+    - h2
+    - http/1.1
+  skip-cert-verify: true
+
+- name: "Trojan WS"
+  type: trojan
+  server: server
+  port: 443
+  password: password
+  udp: true
+  sni: example.com
+  skip-cert-verify: true
+  network: ws
+  ws-path: "/path"
+  ws-headers:
+    Host: example.com
+
+- name: "Trojan GRPC"
+  server: server
+  port: 443
+  type: trojan
+  password: "example"
+  udp: true
+  sni: example.com
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: "example"

@@ -1,0 +1,30 @@
+proxies:
+- name: "Vmess WS"
+  server: server
+  port: 443
+  type: vmess
+  uuid: xxxxxxxxxxxxxxx
+  alterId: 64
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: example.com
+  network: ws
+  ws-path: "/path"
+  ws-headers:
+    Host: bing.com
+
+- name: "Vmess GRPC"
+  server: server
+  port: 443
+  type: vmess
+  uuid: xxxxxxxxxxxxxxx
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: example.com
+  network: grpc
+  grpc-opts:
+    grpc-service-name: "example"
