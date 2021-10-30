@@ -60,9 +60,9 @@ profile:
   store-selected: true
   store-fakeip: true
 proxy-providers:
-  Ss_Ssr: {type: file, path: "/etc/openclash/proxy_provider/Ss_Ssr.yaml", health-check: {enable: true, interval: 99, lazy: true, url: 'http://www.gstatic.com/generate_204'}}
-  Trojan: {type: file, path: "/etc/openclash/proxy_provider/Trojan.yaml", health-check: {enable: true, interval: 99, lazy: true, url: 'http://www.gstatic.com/generate_204'}}
-  Vmess: {type: file, path: "/etc/openclash/proxy_provider/Vmess.yaml", health-check: {enable: true, interval: 99, lazy: true, url: 'http://www.gstatic.com/generate_204'}}
+  Ss_Ssr: {type: file, path: "./proxy_provider/Ss_Ssr.yaml", health-check: {enable: true, interval: 99, lazy: true, url: 'http://www.gstatic.com/generate_204'}}
+  Trojan: {type: file, path: "./proxy_provider/Trojan.yaml", health-check: {enable: true, interval: 99, lazy: true, url: 'http://www.gstatic.com/generate_204'}}
+  Vmess: {type: file, path: "./proxy_provider/Vmess.yaml", health-check: {enable: true, interval: 99, lazy: true, url: 'http://www.gstatic.com/generate_204'}}
 proxy-groups:
 - {name: PROXY, type: select, disable-udp: false, proxies: ["AUTO"], use: ["Ss_Ssr","Trojan","Vmess"]}
 - {name: AUTO, type: url-test, disable-udp: false, use: ["Ss_Ssr","Trojan","Vmess"], url: http://www.gstatic.com/generate_204', interval: 600, tolerance: 100}
@@ -76,12 +76,12 @@ proxy-groups:
 rule-providers:
   Chatting: {type: file, behavior: classical, path: "./rule_provider/Chatting.yaml"}
   TikTok: {type: file, behavior: classical, path: "./rule_provider/TikTok.yaml"}
-  Music: {type: file, behavior: classical, path: "/etc/openclash/rule_provider/Music.yaml"}
-  Gaming: {type: file, behavior: classical, path: "/etc/openclash/rule_provider/Gaming.yaml"}
-  Facebook: {type: file, behavior: classical, path: "/etc/openclash/rule_provider/Facebook.yaml"}
-  YouTube: {type: file, behavior: classical, path: "/etc/openclash/rule_provider/YouTube.yaml"}
-  Disney: {type: file, behavior: classical, path: "/etc/openclash/rule_provider/Disney.yaml"}
-  AdBlock: {type: file, behavior: classical, path: "/etc/openclash/rule_provider/StevenBlack.yaml"}
+  Music: {type: file, behavior: classical, path: "./rule_provider/Music.yaml"}
+  Gaming: {type: file, behavior: classical, path: "./rule_provider/Gaming.yaml"}
+  Facebook: {type: file, behavior: classical, path: "./rule_provider/Facebook.yaml"}
+  YouTube: {type: file, behavior: classical, path: "./rule_provider/YouTube.yaml"}
+  Disney: {type: file, behavior: classical, path: "./rule_provider/Disney.yaml"}
+  AdBlock: {type: file, behavior: classical, path: "./rule_provider/StevenBlack.yaml"}
 script:
   shortcuts:
     Whatsapp_udp: network == 'udp' and ((dst_port == 1900) or (dst_port == 3478) or (dst_port == 34784) or (dst_port == 40279) or (dst_port == 45395) or (dst_port == 50318) or (dst_port == 59234))
