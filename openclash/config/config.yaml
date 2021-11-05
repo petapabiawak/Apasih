@@ -16,55 +16,19 @@ dns:
   ipv6: false
   enhanced-mode: redir-host
   listen: 127.0.0.1:7874
-  nameserver:
-  - 8.8.8.8
-  - 8.8.4.4
-  fallback:
-  - https://dns.google/dns-query
-  - tls://dns.google:853
-  fallback-filter:
-    geoip: false
-    ipcidr:
-    - 0.0.0.0/8
-    - 10.0.0.0/8
-    - 100.64.0.0/10
-    - 127.0.0.0/8
-    - 169.254.0.0/16
-    - 172.16.0.0/12
-    - 192.0.0.0/24
-    - 192.0.2.0/24
-    - 192.88.99.0/24
-    - 192.168.0.0/16
-    - 198.18.0.0/15
-    - 198.51.100.0/24
-    - 203.0.113.0/24
-    - 224.0.0.0/4
-    - 240.0.0.0/4
-    - 255.255.255.255/32
-    domain:
-    - "+.google.com"
-    - "+.facebook.com"
-    - "+.youtube.com"
-    - "+.githubusercontent.com"
-  default-nameserver:
-  - 8.8.8.8
-  - 8.8.4.4
+  nameserver: ["8.8.8.8","8.8.4.4"]
+  fallback: ["https://dns.google/dns-query","tls://dns.google:853"]
+  fallback-filter: {geoip: false, ipcidr: ["0.0.0.0/8","10.0.0.0/8","100.64.0.0/10","127.0.0.0/8","169.254.0.0/16","172.16.0.0/12","192.0.0.0/24","192.0.2.0/24","192.88.99.0/24","192.168.0.0/16","198.18.0.0/15","198.51.100.0/24","203.0.113.0/24","224.0.0.0/4","240.0.0.0/4","255.255.255.255/32"], domain: ["+.google.com","+.facebook.com","+.youtube.com","+.githubusercontent.com"]}
+  default-nameserver: ["8.8.8.8","8.8.4.4"]
 ipv6: false
-tun:
-  enable: true
-  stack: system
-  dns-hijack:
-  - tcp://8.8.8.8:53
-  - tcp://8.8.4.4:53
-profile:
-  store-selected: true
-  store-fakeip: true
+tun: {enable: true, stack: system, dns-hijack: ["tcp://8.8.8.8:53","tcp://8.8.4.4:53"]}
+profile: {store-selected: true, store-fakeip: true}
 proxy-providers:
   Ss_Ssr: {type: file, path: "./proxy_provider/Ss_Ssr.yaml", health-check: {enable: true, interval: 99, lazy: true, url: 'http://www.gstatic.com/generate_204'}}
   Trojan: {type: file, path: "./proxy_provider/Trojan.yaml", health-check: {enable: true, interval: 99, lazy: true, url: 'http://www.gstatic.com/generate_204'}}
   Vmess: {type: file, path: "./proxy_provider/Vmess.yaml", health-check: {enable: true, interval: 99, lazy: true, url: 'http://www.gstatic.com/generate_204'}}
 proxy-groups:
-- {name: PROXY, type: select, disable-udp: false, proxies: ["AUTO"], use: ["Ss_Ssr","Trojan","Vmess"]}
+- {name: PROXY, type: select, disable-udp: false, proxies: ["DIRECT","AUTO"], use: ["Ss_Ssr","Trojan","Vmess"]}
 - {name: AUTO, type: url-test, disable-udp: false, use: ["Ss_Ssr","Trojan","Vmess"], url: http://www.gstatic.com/generate_204', interval: 600, tolerance: 100}
 - {name: CHAT, type: select, disable-udp: false, proxies: ["DIRECT","PROXY"]}
 - {name: TIKTOK, type: select, disable-udp: false, proxies: ["DIRECT","PROXY","REJECT"]}
